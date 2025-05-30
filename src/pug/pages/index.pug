@@ -1,0 +1,118 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'project'
+    var id_page = 'home'
+    var class_page = 'home '
+    var persons = [
+      {
+        img: './assets/images/person1.jpg',
+        name: 'Ricardo Dunin',
+        position: 'Ricardo Dunin, has over 35 years of experience in the US, the Caribbean, and Brazil. He is responsible for the development of three Ritz-Carlton Residences (Miami Beach, Singer Island, and Pompano Beach), the development and brand creation of Le Sereno Hotel in St. Barth, and the development of 12 hotels with Accor in Rio de Janeiro.',
+      }, 
+      {
+        img: './assets/images/person2.jpg',
+        name: 'Gilberto Garcia-Tuñon',
+        position: 'Gilberto’s 20 years of experience in hospitality operations span eight new hotel launches in the luxury sector and leadership roles at iconic properties including The Raleigh Miami Beach, One Bal Harbour Resort, Canyon Ranch Miami Beach, The Shore Club, and Mandarin Oriental Miami.  ',
+      },
+      {
+        img: './assets/images/person3.jpg',
+        name: 'Chris Rollins',
+        position: 'With a 25-year track record of leadership excellence in the hospitality industry, Christopher is known for driving operational excellence, enhancing guest experiences, and optimizing business growth. Christopher is an influential member of the Miami Dade International Trade Consortia, Miami Beach Chamber of Commerce Board, Greater Miami Convention and Visitors Bureau Board, Florida Restaurants & Lodging Association Board, and Greater Miami and the Beaches Hotel Association board.',
+      }
+    ];
+    var mobilePartners = [
+      './assets/images/mobile-partners/mariot.png',
+      './assets/images/mobile-partners/mariot-bonvoy.png',
+      './assets/images/mobile-partners/home-n-villas.png',
+      './assets/images/mobile-partners/hyatt.png',
+      './assets/images/mobile-partners/world-of-hyatt.png',
+
+    ]
+
+block meta
+  title= 'North managment'
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+block content
+  .screen1.g-screen-with-paddings
+    .screen1__content
+      .screen1__slogan A standard-setting new model of residential ownership.
+      .screen1__text 
+        div Relevant, enduring, and innovative residential experiences with a commitment to quality, personalized service, and hospitality.
+  .video-screen
+    .video-screen__video
+      video(muted playsinline autoplay loop)
+        source(src="./static/NORTH-Mgt-Video.mp4", type="video/mp4")
+  include ../blocks/block-about-us.pug
+  .home-simple-block
+    .home-simple-block__content
+      .block-subtitle Our Approach
+      .home-simple-block__text.text-42 North Development redefines and evolves the way we live now, with a portfolio of properties supported by a proprietary, AI-powered platform, personalized services, and hand-picked, top-tier hospitality teams—yielding relevant, enduring spaces in exceptional locations. 
+      .home-simple-block__button
+          button(type="button").dashed-button
+            span Explore our approach 
+            <svg xmlns="http://www.w3.org/2000/svg" width="16.563" height="16.563" viewBox="0 0 16.563 16.563">
+              <path id="Icon_ionic-md-arrow-back" data-name="Icon ionic-md-arrow-back" d="M17.688,11.1H8.795l4.1-4.1L11.833,5.977,5.977,11.833l5.856,5.856,1.025-1.025-4.062-4.1h8.894Z" transform="translate(25.015 8.281) rotate(135)" fill="#f4f3ec"/>
+            </svg>
+  .home-simple-block
+    .home-simple-block__content
+      .block-subtitle POrtfolio
+      .home-simple-block__text.home-simple-block__text--with-padding.text-42 A growing portfolio of unique real estate offerings with a focus on quality and service.
+      .home-simple-block__button
+          button(type="button").dashed-button
+            span Explore our Portfolio
+            <svg xmlns="http://www.w3.org/2000/svg" width="16.563" height="16.563" viewBox="0 0 16.563 16.563">
+              <path id="Icon_ionic-md-arrow-back" data-name="Icon ionic-md-arrow-back" d="M17.688,11.1H8.795l4.1-4.1L11.833,5.977,5.977,11.833l5.856,5.856,1.025-1.025-4.062-4.1h8.894Z" transform="translate(25.015 8.281) rotate(135)" fill="#f4f3ec"/>
+            </svg>
+      img(src="./assets/images/home/portfolio.png").home-simple-block__img
+  .home-news.g-screen-with-paddings
+    .home-news__bg(style="background-image: url('./assets/images/home/news-bg.jpg')")
+    .home-news__content
+      .block-subtitle.block-subtitle--dark News
+      .home-news__title.text-42.text-42--dark The talk of the town. Check out our latest media coverage.
+      .home-news__cards.swiper-container(data-news-slider)
+        .swiper-wrapper
+          each val in [1,2,3,4,5,6]
+            .swiper-slide.news-card
+              .news-card__date April 2 2024
+              .news-card__img
+                img(src="./assets/images/home/news-img.svg", alt="", srcset="")
+              .news-card__title Article Title
+              .news-card__text Lorem ipsum dolor sit amet, consectetur adip iscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+              a(href="#" target='_blank').news-card__link 
+                span ReAD FULL ARTICLE
+                <svg xmlns="http://www.w3.org/2000/svg" width="16.563" height="16.563" viewBox="0 0 16.563 16.563">
+                  <path id="Icon_ionic-md-arrow-back" data-name="Icon ionic-md-arrow-back" d="M17.688,11.1H8.795l4.1-4.1L11.833,5.977,5.977,11.833l5.856,5.856,1.025-1.025-4.062-4.1h8.894Z" transform="translate(25.015 8.282) rotate(135)"/>
+                </svg>
+  .home-slider.g-screen-with-paddings
+    .home-slider__bg(style="background-image: url('./assets/images/home/news-bg.jpg')")
+    .home-slider__content
+      .swiper-container(data-home-slider)
+        .swiper-wrapper
+          .swiper-slide.home-slider__slide
+            .home-slider__slide-title “To ensure that value and quality remain intact, we have a created a one-of-a-kind management company to oversee day-to-day services, ensuring that the brand maintains its top-level reputation from one project to the next.”
+            .home-slider__slide-text RICARDO DUNIN
+            .home-slider__slide-text Founding Partner
+          .swiper-slide.home-slider__slide
+            .home-slider__slide-title “What we are building is a completely new asset class and a welcome addition to the Brickell neighborhood, where many buyers have been priced out.”
+            .home-slider__slide-text Juan Carlos Tessara
+            .home-slider__slide-text Founding Partner
+          .swiper-slide.home-slider__slide
+            .home-slider__slide-title “Domus Brickell Park is one of the most exciting opportunities for buyers in Miami’s most in-demand urban setting, and we are thrilled to be celebrating this latest milestone, bringing it closer to fruition.”
+            .home-slider__slide-text Eduardo Vargas
+            .home-slider__slide-text President
+        .swiper-pagination(data-home-slider-pagination)
+        .timeline-block__list--small-item July — Start of Construction of Domus Brickell Park
+  include ../includes/contact-screen.pug
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

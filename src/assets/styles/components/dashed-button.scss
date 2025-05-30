@@ -1,0 +1,26 @@
+.dashed-button {
+        font-size: pxWidthInVw(12);
+        line-height: 150%;
+        @include adobeXdLetterSpacingToEm(140);
+        text-transform: uppercase;
+        color: var(--color-bg-colour);
+        border: 1px dashed var(--color-bg-colour);
+        padding: 5px 10px;
+        display: flex;
+        align-items: center;
+        svg {
+            width: 24px;
+            height: 24px;
+            margin-left: 10px;
+        }
+        @media (hover: hover) {
+            svg {
+                transform-origin: center;
+                transition: transform 0.3s ease-in-out;
+                transform-box: fill-box;
+            }
+            &:hover svg {
+                transform: rotate(45deg);
+            }
+        }
+}

@@ -1,0 +1,8 @@
+.social-link {
+        text-decoration: none;
+        color: var(--color-bg-colour);
+        font-size: pxWidthInVw(12);
+        line-height: 120%;
+        @include adobeXdLetterSpacingToEm(140);
+
+}

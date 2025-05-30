@@ -1,0 +1,23 @@
+.footer {
+  padding-left: var(--page-side-fields);
+  padding-right: var(--page-side-fields);
+  text-align: right;
+  padding-top: 23px;
+  padding-bottom: 26px;
+  @include to(600px){
+    text-align: left;
+    padding-bottom: 39px;
+    padding-top: 33px;
+  }
+  a {
+    font-size: 10px;
+    line-height: 14px;
+    color: var(--color-bg-colour);
+    margin-right: 40px;
+  }
+  span {
+    font-size: 8px;
+    line-height: 14px;
+      color: var(--color-bg-colour);
+  }
+}

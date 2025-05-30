@@ -1,0 +1,34 @@
+- 
+  var links = [
+    { hover_img: './assets/images/menu/home.jpg', href: '/', text: 'Home' },
+    { hover_img: './assets/images/menu/firm.jpg', href: '/firm', text: 'Firm' },
+    { hover_img: './assets/images/menu/portfolio.jpg', href: '/portfolio', text: 'portfolio' },
+    { hover_img: './assets/images/menu/approach.jpg', href: '/approach', text: 'approach' },
+    { hover_img: './assets/images/menu/press.jpg', href: '/press', text: 'press' },
+    { hover_img: './assets/images/menu/team.jpg', href: '/team', text: 'team' },
+    { hover_img: './assets/images/menu/contact.jpg', href: '/contact', text: 'contact' }
+  ]
+nav.menu(data-lenis-prevent data-menu)
+  .menu__left
+    .menu__left-hovers
+      each link in links
+        img(src=link.hover_img, alt="", srcset="" data-menu-hover-image=link.href loading="lazy")
+    .menu__left-logo
+      <svg xmlns="http://www.w3.org/2000/svg" width="294.579" height="109.69" viewBox="0 0 294.579 109.69">
+        <g id="Сгруппировать_16712" data-name="Сгруппировать 16712" transform="translate(-354.375 -1485.296)">
+          <path id="Контур_173" data-name="Контур 173" d="M92.258.813H0V110.5H204.541Z" transform="translate(354.375 1484.483)" fill="#f4f3ec"/>
+          <rect id="Прямоугольник_1798" data-name="Прямоугольник 1798" width="90.037" height="109.69" transform="translate(558.917 1485.296)" fill="#f4f3ec"/>
+        </g>
+      </svg>
+
+  .menu__right
+    button(type="button" data-menu-close).menu__close Close
+    ul.menu__list
+      each link in links
+        li.menu__item
+          a.menu__link(href=link.href data-menu-hover=link.href)= link.text
+    .menu__right-bottom
+      .menu__socials
+        a(href="https://facebook.com").social-link FACEBOOK
+        a(href="https://instagram.com").social-link INSTAGRAM
+      a(href="https://maps.app.goo.gl/Tzs9x5KpBDVmbBJc9", target="_blank", rel="noopener noreferrer").menu__adress 1200 Brickell Avenue, 18th Floor, Miami Florida 33131

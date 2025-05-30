@@ -1,0 +1,43 @@
+.press-block {
+    &__content {
+        @include row-flex();
+    }
+    &__title {
+        @include size(9);
+        @include shift-left(3);
+        @include shift-right(0);
+        @include size-xs(12);
+        @include shift-xs(0);
+        margin-bottom: 20px;
+        font-size: pxWidthInVw(42);
+        line-height: 140%;
+        @include adobeXdLetterSpacingToEm(-20);
+        padding-top: 40px;
+        border-top: 1px solid var(--color-bg-colour);
+        margin-bottom: 100px;
+    }
+    &__group1 {
+        @include size(9);
+        @include shift-left(3);
+        @include shift-right(0);
+        @include size-xs(12);
+        @include shift-xs(0);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: pxWidthInVw(25);
+        margin-bottom: 60px;
+    }
+    &__group2 {
+        @include size(9);
+        @include shift-left(3);
+        @include shift-right(0);
+        @include size-xs(12);
+        @include shift-xs(0);
+        .press-card2~.press-card2 {
+            margin-top: 36px;
+        }
+    }
+    .block-subtitle {
+        margin-bottom: -1.75em;
+    }
+}

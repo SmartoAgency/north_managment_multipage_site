@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <clipPath id="clip-Favicon">
+      <rect width="1080" height="1080"/>
+    </clipPath>
+  </defs>
+  <g id="Favicon" clip-path="url(#clip-Favicon)">
+    <rect width="1080" height="1080" fill="#fff"/>
+    <g id="Сгруппировать_16610" data-name="Сгруппировать 16610" transform="translate(-2908 -163.147)">
+      <path id="Контур_154" data-name="Контур 154" d="M276.437.813H0V329.482H612.874Z" transform="translate(3007 538)" fill="#333"/>
+      <rect id="Прямоугольник_1789" data-name="Прямоугольник 1789" width="269.781" height="328.668" transform="translate(3619.875 538.813)" fill="#333"/>
+    </g>
+  </g>
+</svg>

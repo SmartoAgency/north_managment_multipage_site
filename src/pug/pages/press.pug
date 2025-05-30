@@ -1,0 +1,66 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'press'
+    var id_page = 'id-page-press'
+    var class_page = 'class-page-press'
+    var breadcrumbsSubitem = [
+      {
+        label: 'About',
+        link: pagesLink[0].about
+      }
+    ]
+  
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/header.js')
+  script(defer src='./assets/scripts/press.js')
+block content
+  .inner-screen-1
+  .press-block.g-screen-with-paddings
+    .press-block__content
+      .block-subtitle Press
+      .press-block__title North Development in the media.
+      .press-block__group1
+        each val in [12,3,4,5]
+          .press-card
+            .press-card__date April #{val} 2024
+            .press-card__img
+              img(src="./assets/images/press-img.svg", alt="", srcset="")
+            .press-card__img2
+              img(src="./assets/images/press-img2.jpg", alt="", srcset="")
+            .press-card__title Article Title
+            .press-card__text Lorem ipsum dolor sit amet, consectetur adip iscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+            a(href="#" target='_blank').press-card__link 
+              span ReAD FULL ARTICLE
+              <svg xmlns="http://www.w3.org/2000/svg" width="16.563" height="16.563" viewBox="0 0 16.563 16.563">
+                <path fill="#F4F3EC" id="Icon_ionic-md-arrow-back" data-name="Icon ionic-md-arrow-back" d="M17.688,11.1H8.795l4.1-4.1L11.833,5.977,5.977,11.833l5.856,5.856,1.025-1.025-4.062-4.1h8.894Z" transform="translate(25.015 8.282) rotate(135)"/>
+              </svg>
+      .press-block__group2
+        each val in [1,2,3,4,5]
+          .press-card2
+            .press-card2__img
+              img(src="./assets/images/press-img.svg", alt="", srcset="")
+            .press-card2__text-wrap
+                .press-card2__date April #{val} 2024
+                .press-card2__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam…
+            a(href="http://google.com", target="_blank", rel="noopener noreferrer").press-card2__link
+              span ReAD FULL ARTICLE
+              <svg xmlns="http://www.w3.org/2000/svg" width="16.563" height="16.563" viewBox="0 0 16.563 16.563">
+                <path id="Icon_ionic-md-arrow-back" data-name="Icon ionic-md-arrow-back" d="M11.712,5.124H2.818l4.1-4.1L5.856,0,0,5.856l5.856,5.856,1.025-1.025-4.062-4.1h8.894Z" transform="translate(16.563 8.282) rotate(135)" fill="#f4f3ec"/>
+              </svg>
+  include ../includes/contact-screen.pug
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

@@ -1,0 +1,24 @@
+extends ../layout/main
+	
+block meta
+	title= '404'
+	meta(name='description', content='')
+block head
+		link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+	script(src='./assets/scripts/vendors.bundle.js')
+	script(src='./assets/scripts/index.bundle.js')
+
+block content
+	.container.page404
+		.page404__content
+			p(class="text-style-1920-h-3 page404__title") Page not found
+			div(class="link-wrap")
+				a(class="header__button" href="/")
+					span Main page
+
+block footer
+
+block header
+	include ../includes/header.pug
+

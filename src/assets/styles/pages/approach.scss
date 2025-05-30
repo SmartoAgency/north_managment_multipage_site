@@ -1,0 +1,96 @@
+.approach {
+    --group-t-padding: 60px;
+    &__content {
+        @include row-flex();
+    }
+    &__line {
+        height: 1px;
+        background-color: var(--color-bg-colour);
+        margin-bottom: 30px;
+        width: 100%;
+    }
+    &__group {
+        @include size(12);
+        @include shift-padding-left(3);
+        @include shift-padding-right(0);
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            left: 19.3%;
+            top: 0;
+            width: 1px;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='26.627' viewBox='0 0 1 26.627'%3E%3Cpath id='Контур_466' data-name='Контур 466' d='M0,0V26.627' transform='translate(0.5)' fill='none' stroke='%23f4f3ec' stroke-width='1' stroke-dasharray='1 2'/%3E%3C/svg%3E%0A");
+            background-repeat: repeat-y;
+        }
+        &--first:after {
+            top: 50px;
+            height: calc(100% - 50px);
+        }
+        &--last:after {
+            height: calc(50px + var(--group-t-padding));
+        }
+        &-title {
+            position: relative;
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0.3em;
+                right: 106.966667%;
+                width: 36px;
+                height: 36px;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cg id='Эллипс_10' data-name='Эллипс 10' fill='%23171717' stroke='%23f4f3ec' stroke-width='1' stroke-dasharray='1 2'%3E%3Ccircle cx='18' cy='18' r='18' stroke='none'/%3E%3Ccircle cx='18' cy='18' r='17.5' fill='none'/%3E%3C/g%3E%3C/svg%3E%0A");
+                background-repeat: no-repeat;
+                background-size: cover;
+                z-index: 2;
+            }
+            &:before {
+                content: '';
+                border-radius: 50%;
+                position: absolute;
+                top: calc(0.3em + 9px);
+                right: calc(106.966667% + 9px);
+                width: 18px;
+                height: 18px;
+                background-color: var(--color-bg-colour);
+                z-index: 3;
+                transition: .25s ease-in-out;
+                opacity: 0;
+            }
+            
+        }
+        .block-subtitle {
+            position: absolute;
+            left: 0;
+            top: var(--group-t-padding);
+        }
+        &--first .block-subtitle {
+            top: 0;
+        }
+    }
+    &__group.active &__group-title:before {
+        opacity: 1;
+    }
+    &__group~&__group {
+        padding-top: var(--group-t-padding);
+    }
+
+    .block-subtitle {
+        @include size(3);
+        @include shift(0);
+        margin-bottom: -1.5em;
+    }
+    &__text-big {
+        font-size: pxWidthInVw(42);
+        line-height: 140%;
+        @include adobeXdLetterSpacingToEm(-20);
+        margin-bottom:30px;
+    }
+    &__text {
+        font-size: pxWidthInVw(18);
+        line-height: 155%;
+        @include adobeXdLetterSpacingToEm(20);
+        margin-bottom: 20px;
+    }
+}
