@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 const webpack = require('webpack');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
@@ -5,12 +6,26 @@ const config = {
   mode: process.argv.includes('--production') ? 'production' : 'development',
   entry: {
     index: './src/assets/scripts/index-app.js',
+    portfolio: './src/assets/scripts/portfolio.js',
   },
   output: {
     filename: '[name].bundle.js',
   },
   module: {
     rules: [
+      {
+        test: /\.(?:js|mjs|cjs)$/,
+        // exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            targets: 'defaults',
+            presets: [
+              ['@babel/preset-env']
+            ]
+          }
+        }
+      }
     ],
   },
   optimization: {
@@ -27,16 +42,6 @@ const config = {
       },
     },
   },
-  plugins: [
-    new UglifyJSPlugin({
-      sourceMap: true,
-      uglifyOptions: {
-        compress: {
-          drop_console: process.argv.includes('--production'),
-        },
-      },
-    }),
-  ],
 };
 
 module.exports = config;

@@ -1,0 +1,58 @@
+.contact-page-screen {
+    --color: var(--color-bg-colour);
+    padding-bottom: calc(var(--section-v-offset) * 1.75);
+    &__content {
+        @include row-flex();
+        .block-subtitle {
+            margin-bottom: -1.75em;
+        }
+    }
+    &__title {
+        border-top: 1px solid var(--color-bg-colour);
+        margin-bottom: 36px;
+        @include size(9);
+        @include shift-left(3);
+        @include shift-right(0);
+        @include size-xs(12);
+    }
+    &__small {
+        @include size(9);
+        @include shift-left(3);
+        @include shift-right(0);
+        @include size-xs(12);
+        @include shift-xs(0);
+        margin-bottom: 8px;
+        font-size: pxWidthInVw(12);
+        line-height: 140%;
+        @include adobeXdLetterSpacingToEm(140);
+        color: var(--color-bg-colour);
+        text-transform: uppercase;
+    }
+    &__big {
+        @include size(9);
+        @include shift-left(3);
+        @include shift-right(0);
+        @include size-xs(12);
+        @include shift-xs(0);
+        margin-bottom: 24px;
+        font-size: pxWidthInVw(42);
+        line-height: 133%;
+        @include adobeXdLetterSpacingToEm(-20);
+        text-decoration: none;
+        color: var(--color-bg-colour);
+        @include from(1025px){
+            padding-right: 40%;
+        }
+    }
+    &__button {
+        @include size(9);
+        @include shift-left(3);
+        @include shift-right(0);
+        @include size-xs(12);
+        @include shift-xs(0);
+        a {
+            text-decoration: none;
+            width: max-content;
+        }
+    }
+}

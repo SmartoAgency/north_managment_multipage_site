@@ -4,20 +4,26 @@
       .block-about-us__subtitle.block-subtitle #{aboutUsTitle}
     else 
       .block-about-us__subtitle.block-subtitle About us
-    .block-about-us__text1 North Development offers a portfolio of properties strategically selected for their exceptional location, timeless appeal, and enduring relevance.
-    .block-about-us__text2 The firm’s industry-leading, multidisciplinary team combines specialized knowledge and experience in construction, brand creation, project management, operations, and marketing to develop consistently exceptional residential spaces across the country.
+    .block-about-us__text1(data-split-lines) North Development offers a portfolio of properties strategically selected for their exceptional location, timeless appeal, and enduring relevance.
+    .block-about-us__text2(data-split-lines) The firm’s industry-leading, multidisciplinary team combines specialized knowledge and experience in construction, brand creation, project management, operations, and marketing to develop consistently exceptional residential spaces across the country.
     .block-about-us__item
     .block-about-us__item
       .block-about-us__item-title.block-subtitle SALES
-      .block-about-us__item-value $4B+
+      .block-about-us__item-value 
+        |$
+        span(data-count-up-animation) 4
+        |B+
       .block-about-us__item-subtitle Combined Sales USA, Brazil, and Peru
     .block-about-us__item
       .block-about-us__item-title.block-subtitle DEVELOPMENT
-      .block-about-us__item-value 108
+      .block-about-us__item-value 
+        span(data-count-up-animation) 108
       .block-about-us__item-subtitle Combined Projects in USA, Brazil, and Peru
     .block-about-us__item
       .block-about-us__item-title.block-subtitle EXPERIENCE
-      .block-about-us__item-value 50+
+      .block-about-us__item-value 
+        span(data-count-up-animation) 50
+        |+
       .block-about-us__item-subtitle Years of Combined Experience
     .block-about-us__button
       button(type="button").dashed-button

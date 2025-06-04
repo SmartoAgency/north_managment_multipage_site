@@ -14,13 +14,32 @@
         z-index: 9999;
         background-color: #000;
     }
-    .loader svg {
+    .loader__svg {
         position: absolute;
-        left: 0;
-        top: 0;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 431px;
+        height: auto;
+    }
+
+    .loader__images {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
         width: 100%;
         height: 100%;
     }
+    .loader__images img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
     @media screen and (max-width:600px){
         .loader svg {
             height: 50%;
@@ -31,105 +50,31 @@
 </style>
 
 <div class="loader">
-    <svg data-svg-step1 preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1677 943">
-        <defs>
-            <clipPath id="clip-path">
-                <rect id="Прямоугольник_1772" data-name="Прямоугольник 1772" width="611.422" height="81.789"
-                    fill="#f4f3ec" />
-            </clipPath>
-            <clipPath id="clip-NORTH-HP_11">
-                <rect width="1677" height="943" />
-            </clipPath>
-        </defs>
-        <g id="NORTH-HP_11" data-name="NORTH-HP – 11" clip-path="url(#clip-NORTH-HP_11)">
-            <!-- <rect width="1677" height="943" /> -->
-            <g id="Сгруппировать_16615" data-name="Сгруппировать 16615" transform="translate(532.789 430.605)">
- 
-                <g id="Сгруппировать_16600" data-name="Сгруппировать 16600">
-                    <g id="Сгруппировать_16599" data-name="Сгруппировать 16599">
-                        <g data-loader-text>
-                            <path id="Контур_132" data-name="Контур 132"
-                                d="M383.615.813V35.229L369.9.813H358.023V35.922h5.959V1.506L377.7,35.922h11.872V.813Z"
-                                transform="translate(-114.002 -0.259)" fill="#f4f3ec" />
-                            <path id="Контур_133" data-name="Контур 133"
-                                d="M412.31,18.108C412.31,7.206,419.332,0,429.449,0s17.138,7.206,17.138,18.108-7.022,18.108-17.138,18.108S412.31,29.01,412.31,18.108m28.086,0c0-7.9-4.387-13.258-10.948-13.258S418.5,10.209,418.5,18.108s4.389,13.258,10.949,13.258S440.4,26.008,440.4,18.108"
-                                transform="translate(-131.288)" fill="#f4f3ec" />
-                            <path id="Контур_134" data-name="Контур 134"
-                                d="M492.031,35.922,483.994,22.2h-7.438v13.72H470.6V.814h13.443c8.085,0,13.167,4.2,13.167,10.716a9.884,9.884,0,0,1-7.115,9.747l8.824,14.644ZM476.556,5.941v11.18h7.623c4.3,0,6.883-2.033,6.883-5.59s-2.586-5.59-6.883-5.59Z"
-                                transform="translate(-149.848 -0.259)" fill="#f4f3ec" />
-                            <path id="Контур_135" data-name="Контур 135"
-                                d="M542.27.813V5.94H530.952V35.921h-5.96V5.94H513.674V.813Z"
-                                transform="translate(-163.565 -0.259)" fill="#f4f3ec" />
-                            <path id="Контур_136" data-name="Контур 136"
-                                d="M584.02.813h5.958V35.921H584.02V20.539H567.39V35.921h-5.96V.813h5.96V15.226h16.63Z"
-                                transform="translate(-178.771 -0.259)" fill="#f4f3ec" />
-                            <path id="Контур_137" data-name="Контур 137"
-                                d="M399.367,102.785h-5.96V68.37l-9.053,34.415H373.037L363.982,68.37v34.415h-5.959V67.677H369.8l8.917,34.462,8.869-34.462h11.78Z"
-                                transform="translate(-114.002 -21.55)" fill="#f4f3ec" />
-                            <path id="Контур_138" data-name="Контур 138"
-                                d="M453.468,102.784,450.1,92.714H433.7l-3.372,10.07h-6.282l12.15-35.108H447.6l12.15,35.108ZM435.406,87.633h12.981L441.92,68.415Z"
-                                transform="translate(-135.024 -21.55)" fill="#f4f3ec" />
-                            <path id="Контур_139" data-name="Контур 139"
-                                d="M507.351,67.677h5.96v35.108H501.438L487.719,68.37v34.415H481.76V67.677h11.872l13.719,34.415Z"
-                                transform="translate(-153.403 -21.55)" fill="#f4f3ec" />
-                            <path id="Контур_140" data-name="Контур 140"
-                                d="M562.8,102.784l-3.372-10.07h-16.4l-3.372,10.07h-6.283l12.15-35.108h11.411l12.149,35.108ZM544.741,87.633h12.981l-6.468-19.218Z"
-                                transform="translate(-169.839 -21.55)" fill="#f4f3ec" />
-                            <path id="Контур_141" data-name="Контур 141"
-                                d="M602.006,83.171h17.832v19.355H614.8V93.889c-1.386,4.526-4.989,9.192-12.15,9.192-8.823,0-16.215-7.022-16.215-18.108,0-10.9,7.022-18.108,16.954-18.108,8.361,0,14,4.249,15.937,11.5h-6.236c-1.432-3.973-4.573-6.652-9.7-6.652-6.514,0-10.764,5.359-10.764,13.258,0,7.945,4.344,13.258,10.994,13.258,6.007,0,10.164-3.649,10.3-10.117H602.006Z"
-                                transform="translate(-186.735 -21.291)" fill="#f4f3ec" />
-                            <path id="Контур_142" data-name="Контур 142"
-                                d="M651.051,97.658h17.971v5.127H645.093V67.676H668.6V72.8H651.051v9.379h17.23v5.127h-17.23Z"
-                                transform="translate(-205.412 -21.55)" fill="#f4f3ec" />
-                            <path id="Контур_143" data-name="Контур 143"
-                                d="M729.793,102.785h-5.96V68.37l-9.055,34.415H703.461L694.406,68.37v34.415h-5.958V67.677h11.78l8.915,34.462,8.87-34.462h11.78Z"
-                                transform="translate(-219.217 -21.55)" fill="#f4f3ec" />
-                            <path id="Контур_144" data-name="Контур 144"
-                                d="M765.59,97.658h17.97v5.127h-23.93V67.676h23.514V72.8H765.59v9.379h17.232v5.127H765.59Z"
-                                transform="translate(-241.883 -21.55)" fill="#f4f3ec" />
-                            <path id="Контур_145" data-name="Контур 145"
-                                d="M828.58,67.677h5.96v35.108H822.668L808.947,68.37v34.415h-5.959V67.677h11.872l13.719,34.415Z"
-                                transform="translate(-255.689 -21.55)" fill="#f4f3ec" />
-                            <path id="Контур_146" data-name="Контур 146"
-                                d="M883.709,67.677V72.8H872.391v29.981h-5.96V72.8H855.114V67.677Z"
-                                transform="translate(-272.287 -21.55)" fill="#f4f3ec" />
-                        </g>
-                        <g data-svg-step1-figure>
-                            <path data-name="Контур 147" d="M67.86.813H0V81.494H150.448Z"
-                                transform="translate(0 -0.259)" fill="#f4f3ec" />
-                            <rect data-name="Прямоугольник 1771" width="66.226" height="80.681"
-                                transform="translate(150.448 0.554)" fill="#f4f3ec" />
-                        </g>
-                    </g>
-                </g>
-            </g>
+    <div class="loader__images">
+        <img src="./assets/images/loader/1.jpg" alt="">
+        <img src="./assets/images/loader/2.jpg" alt="">
+        <img src="./assets/images/loader/3.jpg" alt="">
+    </div>
+    <svg class="loader__svg" xmlns="http://www.w3.org/2000/svg" width="431.453" height="160.657" viewBox="0 0 431.453 160.657">
+        <g id="Сгруппировать_16712" data-name="Сгруппировать 16712" transform="translate(-354.375 -1485.296)">
+            <path id="Контур_173" data-name="Контур 173" d="M135.126.813H0V161.47H299.58Z" transform="translate(354.375 1484.483)" fill="#f4f3ec"/>
+            <rect id="Прямоугольник_1798" data-name="Прямоугольник 1798" width="131.872" height="160.657" transform="translate(653.956 1485.296)" fill="#f4f3ec"/>
         </g>
     </svg>
+
 </div>
 
 <script>
-    const svgStep1Width = document.querySelector('[data-svg-step1-figure]').getBoundingClientRect().width;
-    const step1RectLeft = document.querySelector('[data-svg-step1-figure]').getBoundingClientRect().left;
-
-    const centerLeft = window.innerWidth / 2;
-    const centerForFigure = centerLeft - svgStep1Width / 2;
-
-    
-
     let tl = gsap.timeline({ paused: true });
-        if (window.screen.width > 600) {
-            tl
-                .to('.loader [data-loader-text]', { duration: 1, opacity: 0, ease: 'power4.out' })
-                .to('[data-svg-step1-figure]', { x: (centerForFigure - step1RectLeft) * 0.75 ,transformOrigin:'center' })
-                .to('[data-svg-step1-figure]', { duration: 0.95, ease: 'power4.in', scale: 2.8, transformOrigin:'center' })
-                .to('.loader', { autoAlpha: 0, duration: 0.55, ease: 'power2.in' }, '<75%');
+        if (sessionStorage.getItem('loader')) {
+            document.querySelector('.loader').style.display = 'none';
         } else {
-            tl
-                .to('.loader [data-loader-text]', { duration: 1, opacity: 0, ease: 'power4.out' })
-                .to('[data-svg-step1-figure]', { x: (centerForFigure - step1RectLeft)* 2.75,transformOrigin:'center' })
-                .to('[data-svg-step1-figure]', { duration: 0.45, ease: 'power4.out',  scale: 2.8, transformOrigin:'center' })
-                .to('.loader', { autoAlpha: 0, duration: 0.95, ease: 'power2.in' }, '<75%');
+            sessionStorage.setItem('loader', 'loaded');
         }
+        tl
+            .fromTo('.loader__svg', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.5 })
+            .to('.loader__images img', { duration: 0.5, opacity: 1, stagger: 0.75, ease: 'power2.inOut' })
+            .to('.loader', { autoAlpha: 0, duration: 0.55, ease: 'power2.inOut' }, '>0.75');
 
     window.addEventListener('DOMContentLoaded', () => {
         tl.play();

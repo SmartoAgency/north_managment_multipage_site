@@ -6,19 +6,7 @@ const baseFolder = window.location.href.match(/localhost/)
 
 const markersAdresses = {
     main: `${baseFolder}main.svg`,
-    office: `${baseFolder}office.svg`,
-    hotel: `${baseFolder}hotel.svg`,
-    shop: `${baseFolder}shop.svg`,
-    park: `${baseFolder}park.svg`,
-    school: `${baseFolder}school.svg`,
-    education: `${baseFolder}education.svg`,
-    medicine: `${baseFolder}medicine.svg`,
-    market: `${baseFolder}market.svg`,
-    transport: `${baseFolder}transport.svg`,
-    ramsbeyondistanbul: `${baseFolder}ramsbeyondistanbul.svg`,
-    ramscity: `${baseFolder}ramscity.svg`,
-    quattro: `${baseFolder}quattro.svg`,
-    bayramoglu: `${baseFolder}bayramoglu.svg`,
+    'domus_flats_brickell_center': `${baseFolder}domus_flats_brickell_center.svg`,
   };
 
 const markerPopupStyle = `
@@ -34,7 +22,7 @@ line-height: 120%;"
 export async function fetchMarkersData(google) {
 
     
-    const buildLogoSize = new google.maps.Size(125, 55);
+    const buildLogoSize = new google.maps.Size(35,35);
     const sendData = new FormData();
     sendData.append('action', 'infrastructure');
     const url = window.location.href.match(/localhost/)
@@ -94,62 +82,44 @@ export async function fetchMarkersData(google) {
 
 function mockData() {
     return [
-        // {
-        //     "name": "RAMS City Haliç",
-        //     "code": "ramscity",
-        //     "list": [
-        //         {
-        //             "name": "RAMS City Haliç",
-        //             "id": "12312312",
-        //             "coordinations": {
-        //                 "latitude": "41.0334469",
-        //                 "elevation": "28.9212694"
-        //             }
-        //         }
-        //     ]
-        // },
-        // {
-        //     "name": "RAMS BEYOND İSTANBUL",
-        //     "code": "ramsbeyondistanbul",
-        //     "list": [
-        //         {
-        //             "name": "RAMS BEYOND İSTANBUL",
-        //             "id": "12312312",
-        //             "coordinations": {
-        //                 "latitude": "41.109657",
-        //                 "elevation": "29.023951"
-        //             }
-        //         }
-        //     ]
-        // },
         {
-            "name": "Rams Garden Bahçelievler",
+            "name": "North Development headquarter",
             "code": "main",
             "list": [
                 {
-                    "name": "<a style='text-decoration:none; color: rgba(122,144,73,1); font-weight: bold' target='_blank' href='https://ramsgarden.com/'>Rams Garden Bahçelievler</a>",
-                    "id": "00",
+                    "name": "North Development headquarter",
+                    "id": "north-development-hq",
                     "coordinations": {
-                        "latitude": "41.0074626",
-                        "elevation": "28.8806902"
+                      latitude: 25.76211078627346, 
+                      elevation: -80.19233182884052
+                    }
+                },
+                {
+                    "name": "Domus Flats Brickell Park",
+                    "id": "domus-flats-brickell-park",
+                    "coordinations": {
+                      latitude: 25.75978972765427,
+                      elevation:  -80.19770537328476
+                    }
+                },
+                {
+                    "name": "Domus Flats Brickell Center",
+                    "id": "domus-flats-brickell-center",
+                    "coordinations": {
+                      latitude: 25.763745825667705,
+                      elevation:  -80.19755326818876, 
+                    }
+                },
+                {
+                    "name": "House of Wellness",
+                    "id": "house-of-wellness",
+                    "coordinations": {
+                      latitude: 25.765180393698483,
+                      elevation: -80.19676367272604,
                     }
                 }
             ]
         },
-        {
-            "name": "Rams Türkiye",
-            "code": "office",
-            "list": [
-                {
-                    "name": "<a style='text-decoration:none; color: rgba(122,144,73,1); font-weight: bold' href='https://rams-global.com/' target='_blank'>Rams Türkiye</a>",
-                    "id": "10",
-                    "coordinations": {
-                        "latitude": "40.997902",
-                        "elevation": "29.098045"
-                    }
-                }
-            ]
-        }
     ]
 }
 

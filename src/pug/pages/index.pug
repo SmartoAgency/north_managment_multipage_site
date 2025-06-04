@@ -53,7 +53,7 @@ block content
   .home-simple-block
     .home-simple-block__content
       .block-subtitle Our Approach
-      .home-simple-block__text.text-42 North Development redefines and evolves the way we live now, with a portfolio of properties supported by a proprietary, AI-powered platform, personalized services, and hand-picked, top-tier hospitality teams—yielding relevant, enduring spaces in exceptional locations. 
+      .home-simple-block__text.text-42(data-split-lines) North Development redefines and evolves the way we live now, with a portfolio of properties supported by a proprietary, AI-powered platform, personalized services, and hand-picked, top-tier hospitality teams—yielding relevant, enduring spaces in exceptional locations. 
       .home-simple-block__button
           button(type="button").dashed-button
             span Explore our approach 
@@ -63,7 +63,7 @@ block content
   .home-simple-block
     .home-simple-block__content
       .block-subtitle POrtfolio
-      .home-simple-block__text.home-simple-block__text--with-padding.text-42 A growing portfolio of unique real estate offerings with a focus on quality and service.
+      .home-simple-block__text.home-simple-block__text--with-padding.text-42(data-split-lines) A growing portfolio of unique real estate offerings with a focus on quality and service.
       .home-simple-block__button
           button(type="button").dashed-button
             span Explore our Portfolio
@@ -76,6 +76,12 @@ block content
     .home-news__content
       .block-subtitle.block-subtitle--dark News
       .home-news__title.text-42.text-42--dark The talk of the town. Check out our latest media coverage.
+      .home-news__subtitle
+        button(type="button").dashed-button.dashed-button--transparent
+          span Explore LATEST NEWS 
+          <svg xmlns="http://www.w3.org/2000/svg" width="16.563" height="16.563" viewBox="0 0 16.563 16.563">
+            <path id="Icon_ionic-md-arrow-back" data-name="Icon ionic-md-arrow-back" d="M17.688,11.1H8.795l4.1-4.1L11.833,5.977,5.977,11.833l5.856,5.856,1.025-1.025-4.062-4.1h8.894Z" transform="translate(25.015 8.281) rotate(135)"/>
+          </svg>
       .home-news__cards.swiper-container(data-news-slider)
         .swiper-wrapper
           each val in [1,2,3,4,5,6]
@@ -108,7 +114,6 @@ block content
             .home-slider__slide-text Eduardo Vargas
             .home-slider__slide-text President
         .swiper-pagination(data-home-slider-pagination)
-        .timeline-block__list--small-item July — Start of Construction of Domus Brickell Park
   include ../includes/contact-screen.pug
 
 block footer

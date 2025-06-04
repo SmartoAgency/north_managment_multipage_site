@@ -269,8 +269,15 @@
         @include shift-right(0);
         @include size-xs(24);
         @include shift-xs(0);
-        margin-bottom: 20px;
+        margin-bottom: 36px;
         padding-right: 30%;
+    }
+    &__subtitle {
+        @include size(12);
+        @include shift-left(3);
+        @include shift-right(0);
+        @include size-xs(24);
+        @include shift-xs(0);
     }
     &__cards {
         margin-top: 77px;
@@ -335,6 +342,7 @@
     padding-top: var(--section-v-offset);
     padding-bottom: 36px;
     color: var(--color-bg-colour);
+    border-top: 2px solid var(--color-bg-colour);
     border-bottom: 2px solid var(--color-bg-colour);
     @include to(600px){
         padding-bottom: 62px;

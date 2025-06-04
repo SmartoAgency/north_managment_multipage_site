@@ -23,8 +23,16 @@
 	&>* {
 		pointer-events: auto;
 	}
+	&__logo {
+		width: 25%;
+		padding-right: 30px;
+		img {
+			height: 36px;
+			width: auto;
+		}
+	}
 	&__slogan {
-		margin-left: pxWidthInVw(182);
+		// margin-left: pxWidthInVw(182);
 		font-size: 12px;
 		font-weight: 500;
 		text-transform: uppercase;
@@ -55,42 +63,4 @@
 			}
 		}
 	}
-	// .langs {
-	// 	margin-left: auto;
-	// 	display: flex;
-	// 	gap: 8px;
-	// 	a {
-	// 		color: var(--color-black);
-	// 		order: -1;
-	// 	}
-	// 	a.non-active {
-	// 		opacity: 0.5;
-	// 		pointer-events: none;
-	// 		order: 2;
-	// 		text-decoration: none;
-
-	// 	}
-	// }
-	// &__button {
-	// 	border-radius: 17px;
-	// 	background-color: #000;
-	// 	color: #fff;
-	// 	margin-left: 16px;
-	// 	font-size: 12px;
-	// 	font-weight: 500;
-	// 	padding: 9px 10px 8px 12px;
-	// 	text-transform: uppercase;
-	// 	letter-spacing: 0.15em;
-	// 	text-decoration: none;
-	// 	@media (hover: hover) {
-	// 		& {
-	// 			transition: background-color 0.3s, color 0.3s;
-	// 		}
-	// 		&:hover {
-	// 			background-color: #fff;
-	// 			color: #000;
-	// 		}
-	// 	}
-
-	// }
 }

@@ -39,3 +39,30 @@
     content: "";
   }
 }
+
+.fixed-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: var(--color-bg-colour);
+  color: #000;
+  padding: 9px 10px 8px 12px;
+  border-radius: 17px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  cursor: pointer;
+  font-family: $default-font;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: pxWidthInVw(12);
+  line-height: 150%;
+  @include adobeXdLetterSpacingToEm(140);
+  @media (hover: hover) {
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    &:hover {
+      background-color: #000;
+      color: var(--color-bg-colour);
+      
+    }
+  }
+}

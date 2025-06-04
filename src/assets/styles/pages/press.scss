@@ -1,4 +1,5 @@
 .press-block {
+    padding-bottom: var(--section-v-offset);
     &__content {
         @include row-flex();
     }
@@ -36,6 +37,14 @@
         .press-card2~.press-card2 {
             margin-top: 36px;
         }
+    }
+    .pagination {
+        @include size(9);
+        @include shift-left(3);
+        @include shift-right(0);
+        @include size-xs(12);
+        @include shift-xs(0);
+        margin-top: 60px;
     }
     .block-subtitle {
         margin-bottom: -1.75em;

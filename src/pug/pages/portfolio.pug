@@ -1,0 +1,95 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'portfolio'
+    var id_page = 'id-page-portfolio'
+    var class_page = 'class-page-portfolio'
+    var breadcrumbsSubitem = [
+      {
+        label: 'About',
+        link: pagesLink[0].about
+      }
+    ]
+    var buttons = [
+      {label: 'All', name:'main'},
+      {label: 'North Development HQ', name:'north-development-hq'},
+      {label: 'DOMUS FLATS Brickell PArk', name:'domus-flats-brickell-park'},
+      {label: 'DOMUS FLATS Brickell Center', name:'domus-flats-brickell-center'},
+      {label: 'House of Wellness', name:'house-of-wellness'},
+    ];
+
+    var domusCards = [
+      {
+        title: 'DOMUS FLATS Brickell Park',
+        text: 'Furnished condos surrounded by green space in Miami’s most exciting neighborhood. All the essentials in excellent taste, all the amenities that matter.',
+        link: 'https://domusflats.com/BrickellPark/',
+        img: './assets/images/portfolio/DomusBrickellPark_Exterior Closeup 2 UB.jpg',
+      },
+      {
+        title: 'DOMUS FLATS Brickell Center',
+        text: 'A residential urban oasis in the heart of Brickell, with the neighborhood’s exhilarating energy, MICHELIN-starred cuisine, arts, culture, and industry, all at your doorstep.',
+        link: 'https://domusflats.com/brickellcenter/',
+        img: './assets/images/portfolio/DomusBrickellCenter_Exterior_Daytime 2 UB.jpg',
+      }
+    ]
+  
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/portfolio.bundle.js')
+block content
+  .inner-screen-1
+  .our-projects.g-screen-with-paddings
+    .our-projects__content
+      .block-subtitle our projects
+      .our-projects__title(data-split-lines) We’ve narrowed down the luxury residential experience to a place of refined simplicity—everything you want, nothing you don’t, in spaces that evolve and endure.
+      .our-projects__buttons
+        each button in buttons
+          label(for=button.name).our-projects__button
+            input(type="radio", name="markers-radio", id=button.name data-map-marker)
+            .our-projects__button-input
+            .our-projects__button-title #{button.label}
+      .our-projects__map
+        div.map 
+          #map
+  .portfolio.g-screen-with-paddings
+    .portfolio__content
+      .block-subtitle portfolio
+      .portfolio__subtitle REAL STATE / HOSPITALITY
+      .portfolio__title Domus Flats
+      .portfolio__cards
+        each val in domusCards
+          .portfolio__card
+            .portfolio__card-img
+              .portfolio__card-img-wrap
+                img(src=val.img, alt="Domus Flats")
+            .portfolio__card-text
+              .portfolio__card-title(data-split-lines) #{val.title}
+              .portfolio__card-description #{val.text}
+              a(target='_blank' href=val.link).dashed-button
+                span Explore project
+                <svg xmlns="http://www.w3.org/2000/svg" width="16.563" height="16.563" viewBox="0 0 16.563 16.563">
+                  <path id="Icon_ionic-md-arrow-back" data-name="Icon ionic-md-arrow-back" d="M17.688,11.1H8.795l4.1-4.1L11.833,5.977,5.977,11.833l5.856,5.856,1.025-1.025-4.062-4.1h8.894Z" transform="translate(25.015 8.281) rotate(135)" fill="#f4f3ec"/>
+                </svg>
+      .portfolio__delimiter
+      .portfolio__subtitle Real State
+      .portfolio__title(data-split-lines) House of Wellness
+      .portfolio__card2
+        .portfolio__card2-img
+          .portfolio__card2-img-wrap
+            img(src='./assets/images/portfolio/wellness.jpg', alt="Wellness")
+        .portfolio__card2-text A high-energy way of life, with all the elements of wellness in one vibrant place. Created to integrate living well into every element and every experience.
+        a(target='_blank' href="#" disabled).dashed-button
+          span Coming soon
+  include ../includes/contact-screen.pug
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

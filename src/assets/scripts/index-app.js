@@ -1,8 +1,8 @@
 import gsap, { ScrollTrigger } from 'gsap/all';
-
 import './modules/form';
 import Headroom from 'headroom.js';
 import Swiper, { FreeMode, Pagination, Scrollbar } from 'swiper';
+import { lenis } from './modules/scroll/leniscroll';
 import { toggleMenuHandler } from './modules/menu';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -163,7 +163,7 @@ function splitToLinesAndFadeUp(selector, gsap) {
             .fromTo(
                 text.querySelectorAll('span>span'),
                 { yPercent: 100, },
-                { yPercent: 0, stagger: 0.05, duration: 1, ease: 'power4.out' },
+                { yPercent: 0, stagger: 0.1, duration: 1, ease: 'power4.inOut' },
             )
             .add(() => {
                 text.innerHTML = text.textContent;
@@ -176,6 +176,8 @@ function splitToLinesAndFadeUp(selector, gsap) {
     });
 }
 
+
+splitToLinesAndFadeUp('[data-split-lines]', gsap);
 
 
 // pause video when is out of view
@@ -270,5 +272,26 @@ document.querySelectorAll('.timeline-block__list>*').forEach(el => {
         onLeaveBack: () => {
             el.classList.remove('active');
         },
+    });
+})
+
+
+
+
+//gsap count up animation 
+
+gsap.utils.toArray('[data-count-up-animation]').forEach(el => {
+    const countUp = gsap.fromTo(el, {
+        innerHTML: 0,
+    }, {
+        innerHTML: el.innerHTML,
+        duration: 2,
+        ease: 'power1.inOut',
+        snap: { innerHTML: 1 },
+        scrollTrigger: {
+            trigger: el,
+            start: 'top 80%',
+            once: true,
+        }
     });
 })

@@ -26,25 +26,28 @@ block content
   .inner-screen-1
   include ../blocks/block-about-us.pug
   .img-screen
-    img(src="./assets/images/firm/bg.jpg", alt="", srcset="")
+    .paralax-screen
+      .paralax-screen-wrapper-scale
+        .paralax-screen-wrapper-transform
+          img(src="./assets/images/firm/bg.jpg", alt="", srcset="")
   .timeline-block.g-screen-with-paddings
     .timeline-block__content
       .block-subtitle Our History
-      .timeline-block__title Decades of expertise, light-speed progress.
+      .timeline-block__title(data-split-lines) Decades of expertise, light-speed progress.
       .timeline-block__list
-        .timeline-block__list-large-item.active 2021
-        .timeline-block__list--small-item.active January — North Development Foundation
-        .timeline-block__list--small-item November — Site for Domus Brickell Park is Purchased
-        .timeline-block__list-large-item 2022
-        .timeline-block__list--small-item December — Start of Brickell Park sales
-        .timeline-block__list--small-item September — Site of Domus Brickell Center goes under contract
-        .timeline-block__list-large-item 2023
-        .timeline-block__list--small-item February — Purchase of North Development headquarters 
-        .timeline-block__list--small-item October — Site for House of Wellness goes under contract
-        .timeline-block__list-large-item 2024
-        .timeline-block__list--small-item April — $70M construction loan for Brickell Park 
-        .timeline-block__list--small-item May — Start of Brickell Center Sales
-        .timeline-block__list--small-item July — Start of Construction of Domus Brickell Park
+        .timeline-block__list-large-item(data-split-lines) 2021
+        .timeline-block__list--small-item(data-split-lines) January — North Development Foundation
+        .timeline-block__list--small-item(data-split-lines) November — Site for Domus Brickell Park is Purchased
+        .timeline-block__list-large-item(data-split-lines) 2022
+        .timeline-block__list--small-item(data-split-lines) December — Start of Brickell Park sales
+        .timeline-block__list--small-item(data-split-lines) September — Site of Domus Brickell Center goes under contract
+        .timeline-block__list-large-item(data-split-lines) 2023
+        .timeline-block__list--small-item(data-split-lines) February — Purchase of North Development headquarters 
+        .timeline-block__list--small-item(data-split-lines) October — Site for House of Wellness goes under contract
+        .timeline-block__list-large-item(data-split-lines) 2024
+        .timeline-block__list--small-item(data-split-lines) April — $70M construction loan for Brickell Park 
+        .timeline-block__list--small-item(data-split-lines) May — Start of Brickell Center Sales
+        .timeline-block__list--small-item(data-split-lines) July — Start of Construction of Domus Brickell Park
   include ../includes/contact-screen.pug
 block footer
   include ../includes/footer.pug

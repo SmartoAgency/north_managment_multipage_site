@@ -1,0 +1,46 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'contacts'
+    var id_page = 'id-page-contacts'
+    var class_page = 'class-page-contacts'
+    var breadcrumbsSubitem = [
+      {
+        label: 'About',
+        link: pagesLink[0].about
+      }
+    ]
+  
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+block content
+  .inner-screen-1
+  .contact-page-screen.g-screen-with-paddings
+    .contact-page-screen__content
+      .block-subtitle Contact us
+      .contact-page-screen__title
+      .contact-page-screen__small Telephone
+      a(href="tel:3052091324").contact-page-screen__big T 305-209-1324
+      .contact-page-screen__small Email
+      a(href="mailto:Info@NorthDevelopment.com").contact-page-screen__big Info@NorthDevelopment.com
+      .contact-page-screen__small Address
+      a(target='_blank' href="https://maps.app.goo.gl/XS7AqhbjCrqakjyc6").contact-page-screen__big 1200 Brickell Avenue, Suite 1800, Miami Florida 33131
+      .contact-page-screen__button
+        a(target='_blank' href="https://maps.app.goo.gl/XS7AqhbjCrqakjyc6").dashed-button
+          span Get Directions
+          <svg xmlns="http://www.w3.org/2000/svg" width="16.563" height="16.563" viewBox="0 0 16.563 16.563">
+            <path id="Icon_ionic-md-arrow-back" data-name="Icon ionic-md-arrow-back" d="M17.688,11.1H8.795l4.1-4.1L11.833,5.977,5.977,11.833l5.856,5.856,1.025-1.025-4.062-4.1h8.894Z" transform="translate(25.015 8.281) rotate(135)" fill="#f4f3ec"/>
+          </svg>
+  include ../includes/contact-screen.pug
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

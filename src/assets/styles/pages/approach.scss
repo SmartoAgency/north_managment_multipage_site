@@ -1,5 +1,6 @@
 .approach {
     --group-t-padding: 60px;
+    padding-bottom: var(--section-v-offset);
     &__content {
         @include row-flex();
     }
