@@ -1,10 +1,23 @@
 .contact-page-screen {
     --color: var(--color-bg-colour);
     padding-bottom: calc(var(--section-v-offset) * 1.75);
+    @include to(600px){
+        padding-bottom: 86px;
+    }
     &__content {
         @include row-flex();
-        .block-subtitle {
-            margin-bottom: -1.75em;
+        @include from(601px){
+            .block-subtitle {
+                margin-bottom: -1.75em;
+            }
+        }
+        @include to(600px){
+            .block-subtitle {
+                @include size-xs(12);
+                @include shift-xs(0);
+                margin-bottom: 60px;
+                line-height: 140%;
+            }
         }
     }
     &__title {
@@ -14,6 +27,7 @@
         @include shift-left(3);
         @include shift-right(0);
         @include size-xs(12);
+        @include shift-xs(0);
     }
     &__small {
         @include size(9);
@@ -21,12 +35,17 @@
         @include shift-right(0);
         @include size-xs(12);
         @include shift-xs(0);
-        margin-bottom: 8px;
-        font-size: pxWidthInVw(12);
-        line-height: 140%;
-        @include adobeXdLetterSpacingToEm(140);
-        color: var(--color-bg-colour);
-        text-transform: uppercase;
+        & {
+            margin-bottom: 8px;
+            font-size: pxWidthInVw(12);
+            line-height: 140%;
+            @include adobeXdLetterSpacingToEm(140);
+            color: var(--color-bg-colour);
+            text-transform: uppercase;
+        }
+        @include to(1024px){
+            font-size: 12px;
+        }
     }
     &__big {
         @include size(9);
@@ -34,12 +53,21 @@
         @include shift-right(0);
         @include size-xs(12);
         @include shift-xs(0);
-        margin-bottom: 24px;
-        font-size: pxWidthInVw(42);
-        line-height: 133%;
-        @include adobeXdLetterSpacingToEm(-20);
-        text-decoration: none;
-        color: var(--color-bg-colour);
+        & {
+            margin-bottom: 24px;
+            font-size: pxWidthInVw(42); 
+            line-height: 133%;
+            @include adobeXdLetterSpacingToEm(-20);
+            text-decoration: none;
+            color: var(--color-bg-colour);
+        }
+        @include to(1024px){ 
+            font-size: 28px;
+            margin-bottom: 40px;
+        }
+        @include to(400px){
+            font-size: 24px;
+        }
         @include from(1025px){
             padding-right: 40%;
         }

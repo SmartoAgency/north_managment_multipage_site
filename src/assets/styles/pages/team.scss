@@ -3,8 +3,18 @@
     padding-bottom: calc(var(--section-v-offset) * 1.5);
     &__content {
         @include row-flex();
-        .block-subtitle {
-            margin-bottom: -2.5em;
+        @include from(601px){
+            .block-subtitle {
+                margin-bottom: -2.5em;
+            }
+        }
+        @include to(600px){
+            .block-subtitle {
+                @include size-xs(12);
+                @include shift-xs(0);
+                margin-bottom: 60px;
+                line-height: 140%;
+            }
         }
     }
     &__title {
@@ -14,12 +24,18 @@
         @include size-xs(12);
         @include shift-xs(0);
         margin-bottom: 20px;
-        font-size: pxWidthInVw(42);
+        font-size: pxWidthInVw(42); 
+        @include to(1024px){ 
+            font-size: 32px;
+        }
         line-height: 140%;
         @include adobeXdLetterSpacingToEm(-20);
         padding-top: 40px;
         border-top: 1px solid var(--color-bg-colour);
         margin-bottom: 100px;
+        @include to(600px){
+            margin-bottom: 80px;
+        }
     }
     &__paragraph {
         @include size(9);
@@ -30,23 +46,44 @@
         @include from(1025px){
             @include shift-padding-right(3);
         }
-        font-size: pxWidthInVw(20);
-        line-height: 155%;
-        @include adobeXdLetterSpacingToEm(20);
+        & {
+            font-size: pxWidthInVw(20);
+            line-height: 155%;
+            @include adobeXdLetterSpacingToEm(20);
+        }
+        @include to(1024px){
+            font-size: 16px;
+        }
         svg {
             margin-bottom: 18px;
         }
     }
     &__paragraph~&__paragraph {
         margin-top: 43px;
+        @include to(600px){
+            margin-top: 60px;
+        }
     }
 }
 
 
 .team-cards {
     padding-bottom: var(--section-v-offset);
-    .block-subtitle {
-        margin-bottom: -1.75em;
+    @include to(600px){
+        padding-bottom: 120px;
+    }
+    @include from(601px){
+        .block-subtitle {
+            margin-bottom: -1.75em;
+        }
+    }
+    @include to(600px){
+        .block-subtitle {
+            @include size-xs(12);
+            @include shift-xs(0);
+            margin-bottom: 60px;
+            line-height: 140%;
+        }
     }
     &__content {
         @include row-flex();
@@ -57,12 +94,17 @@
         @include shift-right(0);
         @include size-xs(12);
         @include shift-xs(0);
-        margin-bottom: 20px;
-        font-size: pxWidthInVw(42);
-        line-height: 140%;
-        @include adobeXdLetterSpacingToEm(-20);
-        padding-top: pxWidthInVw(151);
-        border-top: 1px solid var(--color-bg-colour);
+        & {
+            margin-bottom: 20px;
+            font-size: pxWidthInVw(42); 
+            line-height: 140%;
+            @include adobeXdLetterSpacingToEm(-20);
+            padding-top: pxWidthInVw(151);
+            border-top: 1px solid var(--color-bg-colour);
+        }
+        @include to(1024px){ 
+            font-size: 32px;
+        }
     }
     &__head-item {
         @include size(9);
@@ -73,6 +115,9 @@
         display: flex;
         align-items: center;
         gap: pxWidthInVw(69);
+        @include to(600px){
+            flex-wrap: wrap;
+        }
         @include from(1025px){
             padding-right: 20%;
         }
@@ -82,6 +127,9 @@
         &-img {
             width: 33%;
             flex-shrink: 0;
+            @include to(600px){
+                width: 100%;
+            }
         }
         &-img-wrap {
             position: relative;
@@ -99,6 +147,9 @@
     }
     &__head-item~&__head-item {
         margin-top: 30px;
+        @include to(600px){
+            margin-top: 80px;
+        }
     }
     &__list2 {
         @include size(9);
@@ -116,9 +167,14 @@
         @include shift-right(0);
         @include size-xs(12);
         @include shift-xs(0);
-        display: flex;
-        flex-wrap: wrap;
-        gap: pxWidthInVw(20) 25px;
+        & {
+            display: flex;
+            flex-wrap: wrap;
+            gap: pxWidthInVw(20) 25px;
+        }
+        @include to(600px){
+            row-gap: 60px;
+        }
         .team-cards__item {
             margin-top: 0;
         }
@@ -130,6 +186,10 @@
         gap: 30px;
         width: calc(33% - 12.5px);
         margin-top: pxWidthInVw(90);
+        @include to(600px){
+            gap: 24px;
+            width: calc(50% - 12.5px);
+        }
         &-img-wrap {
             position: relative;
             padding-bottom: 100%;

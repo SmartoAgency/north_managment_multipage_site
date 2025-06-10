@@ -1,5 +1,8 @@
 .press-block {
     padding-bottom: var(--section-v-offset);
+    @include to(600px){
+        padding-bottom: 120px;
+    }
     &__content {
         @include row-flex();
     }
@@ -9,13 +12,21 @@
         @include shift-right(0);
         @include size-xs(12);
         @include shift-xs(0);
-        margin-bottom: 20px;
-        font-size: pxWidthInVw(42);
-        line-height: 140%;
-        @include adobeXdLetterSpacingToEm(-20);
-        padding-top: 40px;
-        border-top: 1px solid var(--color-bg-colour);
-        margin-bottom: 100px;
+        & {
+            margin-bottom: 20px;
+            font-size: pxWidthInVw(42); 
+            line-height: 140%;
+            @include adobeXdLetterSpacingToEm(-20);
+            padding-top: 40px;
+            border-top: 1px solid var(--color-bg-colour);
+            margin-bottom: 100px;
+        }
+        @include to(600px){ 
+            font-size: 32px;
+            padding-top: 24px;
+            margin-bottom: 86px;
+            line-height: 124%;
+        }
     }
     &__group1 {
         @include size(9);
@@ -23,10 +34,22 @@
         @include shift-right(0);
         @include size-xs(12);
         @include shift-xs(0);
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: pxWidthInVw(25);
-        margin-bottom: 60px;
+        & {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: pxWidthInVw(25);
+            margin-bottom: 60px;
+        }
+        @include to(1024px){
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 24px;
+            margin-bottom: 80px;
+        }
+        @include to(600px){
+            grid-template-columns: repeat(1, 1fr);
+            row-gap: 24px;
+            margin-bottom: 80px;
+        }
     }
     &__group2 {
         @include size(9);
@@ -36,6 +59,9 @@
         @include shift-xs(0);
         .press-card2~.press-card2 {
             margin-top: 36px;
+            @include to(600px){
+                margin-top: 24px;
+            }
         }
     }
     .pagination {
@@ -44,9 +70,18 @@
         @include shift-right(0);
         @include size-xs(12);
         @include shift-xs(0);
-        margin-top: 60px;
+        & {
+            margin-top: 60px;
+        }
     }
     .block-subtitle {
-        margin-bottom: -1.75em;
+        @include from(601px){
+            margin-bottom: -1.75em;
+        }
+        @include to(600px){
+            @include size-xs(12);
+            @include shift-xs(0);
+            margin-bottom: 60px;
+        }
     }
 }

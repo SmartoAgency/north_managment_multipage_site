@@ -1,6 +1,6 @@
 .menu {
     position: fixed;
-    z-index: 1000;
+    z-index: 1001;
     left: 0;
     top: 0;
     width: 100%;
@@ -26,6 +26,9 @@
     &__left {
         width: 50%;
         position: relative;
+        @include to(600px){
+            display: none;
+        }
         &-hovers {
             img {
                 position: absolute;
@@ -56,12 +59,24 @@
         display: flex;
         flex-direction: column;
         align-content: center;
+        @include to(600px){
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            
+            padding-left: var(--page-side-fields);
+        }
     }
     &__right-bottom {
         margin-top: auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include to(600px){
+            margin-top: 0;
+            align-items: flex-start;
+            gap: 12px;
+        }
     }
     &__close {
         font-size: pxWidthInVw(12);
@@ -73,10 +88,27 @@
         margin-left: auto;
         margin-right: 40px;
         color: var(--color);
+        @include to(1024px){
+            font-size: 12px;
+            position: absolute;
+            right: var(--page-side-fields);
+            top: var(--page-side-fields);
+            margin-right: 0;
+        }
     }
     &__list {
-        margin-top: pxInVh(91);
-        margin-bottom: pxInVh(36);
+        @include from(1025px){
+            margin-top: pxInVh(91);
+            margin-bottom: pxInVh(36);
+        }
+        @include from-to(601px, 1024px){
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        @include to(600px){
+            margin-top: auto;
+            margin-bottom: auto;
+        }
     }
     &__item {
         border-bottom: 1px solid var(--color-bg-colour);
@@ -90,6 +122,12 @@
         color: var(--color);
         text-decoration: none;
         text-transform: uppercase;
+        @include to(1024px){
+            font-size: 48px;
+        }
+        @include to(420px){
+            font-size: 40px;
+        }
         @media (hover: hover) {
             transition: color 0.3s ease-in;
             &:hover {
@@ -98,8 +136,14 @@
         }
     }
     &__socials {
+        @include to(600px){
+            display: flex;
+        }
         .social-link~.social-link {
             margin-left: 24px;
+            @include to(600px){
+                margin-left: 8px;
+            }
         }
     }
     &__adress {
@@ -109,5 +153,23 @@
         @include adobeXdLetterSpacingToEm(-20);
         color: var(--color);
         text-decoration: none;
+        @include to(1024px){
+            font-size: 12px;
+        }
+    }
+    @media (hover: hover) {
+        &__close:hover {
+            color: #FF925C;
+            transition: color 0.3s ease-in;
+        }
+        &__adress {
+            transition: 0.3s ease-in;
+            padding: 4px 8px;
+            border-radius: 12px;
+        }
+        &__adress:hover {
+            color: var(--color-black);
+            background-color: var(--color-bg-colour);
+        }
     }
 }

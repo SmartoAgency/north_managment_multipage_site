@@ -116,8 +116,6 @@ function initMap() {
   };
   const markerPopupStyle = `
           style="
-          background: #ffffff;
-          color:#000000;
           font-weight: bold;
           padding:5px 10px;
           font-size: 16px;

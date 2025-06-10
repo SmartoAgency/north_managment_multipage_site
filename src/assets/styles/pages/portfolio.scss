@@ -1,14 +1,20 @@
 .our-projects {
     padding-bottom: var(--section-v-offset);
-
+    border-bottom: 1px solid var(--color-bg-colour);
     &__content {
         @include row-flex();
     }
 
+
     .block-subtitle {
         @include size(12);
         @include shift(0);
-        margin-bottom: -1.75em;
+        @include from(601px){
+            margin-bottom: -1.75em;
+        }
+        @include to(600px){
+            margin-bottom: 60px;
+        }
 
     }
 
@@ -18,13 +24,22 @@
         @include shift-right(0);
         @include size-xs(12);
         @include shift-xs(0);
-        margin-bottom: 20px;
-        font-size: pxWidthInVw(42);
-        line-height: 140%;
-        @include adobeXdLetterSpacingToEm(-20);
-        padding-top: 40px;
-        border-top: 1px solid var(--color-bg-colour);
-        margin-bottom: 75px;
+        & {
+            margin-bottom: 20px;
+            font-size: pxWidthInVw(42); 
+            @include to(600px){ 
+                font-size: 32px;
+            }
+            line-height: 140%;
+            @include adobeXdLetterSpacingToEm(-20);
+            padding-top: 40px;
+            border-top: 1px solid var(--color-bg-colour);
+            margin-bottom: 75px;
+        }
+        @include to(600px){
+            padding-top: 24px;
+            margin-bottom: 30vh;
+        }
 
         @include from(1025px) {
             padding-right: 18%;
@@ -33,11 +48,16 @@
 
     &__map {
         position: relative;
+        padding-bottom: 65vh;
         @include size(9);
         @include shift(0);
+        @include size-md(8);
+        @include shift-md(0);
         @include size-xs(12);
         @include shift-xs(0);
-        padding-bottom: 65vh;
+        @include to(600px){
+            margin-top: 40px;
+        }
 
         #map,
         .map {
@@ -57,6 +77,8 @@
         @include shift(0);
         @include shift-right(1);
         @include shift-left(0);
+        @include size-md(4);
+        @include shift-md(0);
         @include size-xs(12);
         @include shift-xs(0);
     }
@@ -66,7 +88,9 @@
         align-items: center;
         gap: 22px;
         cursor: pointer;
-
+        @include to(600px){
+            gap: 20px;
+        }
         input {
             display: none;
         }
@@ -102,15 +126,45 @@
             padding-top: 7px;
             border-top: 1px solid var(--color-bg-colour);
             flex-grow: 1;
+            @include to(600px){
+                font-size: 12px;
+                line-height: 140%;
+            }
         }
     }
 
     .gm-style-iw-chr {
-        height: 16px;
+        // height: 16px;
+    }
+    .gm-style .gm-style-iw-tc::after {
+        background-color: black;
+    }
+    .gm-ui-hover-effect {
+        width: 24px !important;
+        height: 24px !important;
+        span {
+            width: 24px !important;
+            height: 24px !important;
+            margin: 0 !important;
+            margin-top: 4px !important;
+            background-color: var(--color-bg-colour);
+        }
+    }
+    .gm-style-iw.gm-style-iw-c  {
+        padding-right: 40px;
+    }
+    .gm-style-iw-chr {
+        margin-bottom: -14px;
+    }
+
+    .gm-style .gm-style-iw-c {
+        background-color: var(--color-black);
     }
 
     .gm-style-iw-d {
         color: var(--color-black);
+        overflow: initial !important;
+        padding-bottom: 10px;
     }
 }
 
@@ -118,6 +172,9 @@
     padding-top: calc(var(--section-v-offset));
     padding-bottom: calc(var(--section-v-offset));
     position: relative;
+    @include to(600px){
+        padding-bottom: 120px;
+    }
 
     &__content {
         @include row-flex();
@@ -125,9 +182,16 @@
     }
 
     .block-subtitle {
-        position: absolute;
-        left: var(--page-side-fields);
-        top: 36px;
+        @include size-xs(12);
+        @include shift-xs(0);
+        @include to(600px){
+            margin-bottom: 60px;
+        }
+        @include from(601px){
+            position: absolute;
+            left: var(--page-side-fields);
+            top: 36px;
+        }
     }
 
     &__subtitle {
@@ -136,10 +200,17 @@
         @include shift-right(0);
         @include size-xs(12);
         @include shift-xs(0);
-        font-size: pxWidthInVw(12);
-        line-height: 110%;
-        @include adobeXdLetterSpacingToEm(140);
-        margin-bottom: 8px;
+        & {
+            text-transform: uppercase;
+            font-size: pxWidthInVw(12);
+            line-height: 110%;
+            @include adobeXdLetterSpacingToEm(140);
+            margin-bottom: 8px;
+        }
+        @include to(1024px){
+            font-size: 12px;
+            margin-bottom: 16px;
+        }
     }
 
     &__title {
@@ -148,10 +219,16 @@
         @include shift-right(0);
         @include size-xs(12);
         @include shift-xs(0);
-        font-size: pxWidthInVw(62);
-        line-height: 110%;
-        @include adobeXdLetterSpacingToEm(-20);
-        margin-bottom: 36px;
+        & {
+            font-size: pxWidthInVw(62);
+            line-height: 110%;
+            @include adobeXdLetterSpacingToEm(-20);
+            margin-bottom: 36px;
+        }
+        @include to(1021px){
+            font-size: 44px;
+            margin-bottom: 48px;
+        }
     }
 
     &__cards {
@@ -160,9 +237,15 @@
         @include shift-right(0);
         @include size-xs(12);
         @include shift-xs(0);
-        display: flex;
-        flex-wrap: wrap;
-        gap: 54px;
+        & {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 54px;
+        }
+        @include to(600px){
+            
+            gap: 80px;
+        }
 
         .portfolio__card {
             width: calc(50% - 27px);
@@ -200,6 +283,9 @@
             line-height: 175%;
             @include adobeXdLetterSpacingToEm(-20);
             margin-bottom: 10px;
+            @include to(1024px){
+                font-size: 24px;
+            }
         }
 
         &-description {
@@ -207,6 +293,9 @@
             line-height: 155%;
             @include adobeXdLetterSpacingToEm(20);
             margin-bottom: 30px;
+            @include to(1024px){
+                font-size: 16px;
+            }
         }
 
         .dashed-button {
@@ -220,10 +309,16 @@
         @include shift-right(0);
         @include size-xs(12);
         @include shift-xs(0);
-        height: 1px;
-        background-color: var(--color-bg-colour);
-        margin-top: calc(var(--section-v-offset) * 0.66);
-        margin-bottom: calc(var(--section-v-offset) * 0.66);
+        & {
+            height: 1px;
+            background-color: var(--color-bg-colour);
+            margin-top: calc(var(--section-v-offset) * 0.66);
+            margin-bottom: calc(var(--section-v-offset) * 0.66);
+        }
+        @include to(600px){
+            margin-top: 80px;
+            margin-bottom: 60px;
+        }
     }
 
     &__card2  { 
@@ -240,8 +335,11 @@
             line-height: 155%;
             @include adobeXdLetterSpacingToEm(20);
             margin-bottom: 30px;
-            @include from(601px){
+            @include from(1025px){
                 padding-right: 70%;
+            }
+            @include to(1024px){
+                font-size: 16px;
             }
         }
         

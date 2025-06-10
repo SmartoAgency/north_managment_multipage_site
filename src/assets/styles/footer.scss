@@ -6,14 +6,18 @@
   padding-bottom: 26px;
   @include to(600px){
     text-align: left;
-    padding-bottom: 39px;
-    padding-top: 33px;
+    padding-bottom: 21px;
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
   }
   a {
     font-size: 10px;
     line-height: 14px;
     color: var(--color-bg-colour);
-    margin-right: 40px;
+    @include from(601px){
+      margin-right: 40px;
+    }
   }
   span {
     font-size: 8px;

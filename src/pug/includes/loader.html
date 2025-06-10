@@ -22,6 +22,12 @@
         width: 431px;
         height: auto;
     }
+    @media screen and (max-width:1024px){
+        .loader__svg {
+            width: 290px;
+            height: auto;
+        }
+    }
 
     .loader__images {
         position: absolute;
@@ -42,9 +48,8 @@
 
     @media screen and (max-width:600px){
         .loader svg {
-            height: 50%;
             top: 50%;
-            transform: translateY(-50%);
+            transform: translateY(-50%) translateX(-50%);
         }
     }
 </style>

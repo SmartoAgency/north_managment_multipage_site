@@ -61,15 +61,15 @@ $gold: #FFD700;
 	}
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 600px) {
 	:root {
-		--header-h: auto;
+		--header-h: 72px;
 		--section-v-offset: 75px;
 		--page-side-fields: 36px;
 	}
 }
 
-@media screen and (max-width:375px){
+@media screen and (max-width:400px){
 	:root {
 		--page-side-fields: 20px;
 	}

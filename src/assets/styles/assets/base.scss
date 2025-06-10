@@ -320,6 +320,9 @@ input[type=number]::-webkit-outer-spin-button {
 	@include adobeXdLetterSpacingToEm(140);
 	color: var(--color-bg-colour);
 	text-transform: uppercase;
+	@include to(1024px){
+		font-size: 12px;
+	}
 }
 
 .block-subtitle {
@@ -331,7 +334,11 @@ input[type=number]::-webkit-outer-spin-button {
 
 .text-42 {
 	color: var(--color-bg-colour);
-	font-size: pxWidthInVw(42);
+	font-size: pxWidthInVw(42); 
+	@include to(600px){ 
+		font-size: 32px;
+		line-height: 125%;
+	}
 	line-height: 140%;
 	@include adobeXdLetterSpacingToEm(-20);
 	&--dark {

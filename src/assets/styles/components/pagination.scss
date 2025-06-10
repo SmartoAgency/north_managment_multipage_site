@@ -6,6 +6,10 @@
     line-height: 140%;
     @include adobeXdLetterSpacingToEm(140);
     --color: var(--color-bg-colour);
+    @include to(1024px){
+        font-size: 12px;
+        justify-content: space-between;
+    }
     &__arrow {
         display: flex;
         align-items: center;

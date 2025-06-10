@@ -2,7 +2,8 @@ import markersFromPrevSite from "./markersFromPrevSite";
 
 const baseFolder = window.location.href.match(/localhost/) 
 ? './assets/images/markers/'
-: '/wp-content/themes/rams/assets/images/markers/';
+// : '/wp-content/themes/rams/assets/images/markers/';
+: document.documentElement.dataset.base + 'assets/images/markers/';
 
 const markersAdresses = {
     main: `${baseFolder}main.svg`,
@@ -11,8 +12,7 @@ const markersAdresses = {
 
 const markerPopupStyle = `
 style="
-background: #ffffff;
-color:#000000;
+color:#ffffff;
 font-weight: bold;
 padding:5px 10px;
 font-size: 16px;

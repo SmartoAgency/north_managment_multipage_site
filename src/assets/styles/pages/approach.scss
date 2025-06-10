@@ -1,8 +1,13 @@
 .approach {
     --group-t-padding: 60px;
     padding-bottom: var(--section-v-offset);
+    @include to(600px){
+        --group-t-padding: 160px;
+
+    }
     &__content {
         @include row-flex();
+        
     }
     &__line {
         height: 1px;
@@ -15,6 +20,10 @@
         @include shift-padding-left(3);
         @include shift-padding-right(0);
         position: relative;
+        @include to(600px){
+            padding-left: 53px;
+            padding-top: 100px;
+        }
         &:after {
             content: '';
             position: absolute;
@@ -24,10 +33,25 @@
             height: 100%;
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='26.627' viewBox='0 0 1 26.627'%3E%3Cpath id='Контур_466' data-name='Контур 466' d='M0,0V26.627' transform='translate(0.5)' fill='none' stroke='%23f4f3ec' stroke-width='1' stroke-dasharray='1 2'/%3E%3C/svg%3E%0A");
             background-repeat: repeat-y;
+            @include to(600px){
+                left: 16px;
+            }
         }
         &--first:after {
             top: 50px;
             height: calc(100% - 50px);
+            @include to(600px){
+                top: 125px;
+                height: calc(100% - 125px);
+            }
+        }
+        &--first .approach__line {
+            @include to(600px){
+                position: absolute;
+                left: 0;
+                top: 80px;
+                width: 100%;
+            }
         }
         &--last:after {
             height: calc(50px + var(--group-t-padding));
@@ -59,15 +83,23 @@
                 transition: .25s ease-in-out;
                 opacity: 0;
             }
-            
         }
         .block-subtitle {
             position: absolute;
             left: 0;
             top: var(--group-t-padding);
+            @include from(601px){
+            }
+            @include to(600px){
+                margin-bottom: 60px;
+                display: none;
+            }
         }
         &--first .block-subtitle {
             top: 0;
+            @include to(600px){
+                display: block;
+            }
         }
     }
     &__group.active &__group-title:before {
@@ -78,20 +110,29 @@
     }
 
     .block-subtitle {
-        @include size(3);
-        @include shift(0);
-        margin-bottom: -1.5em;
+        @include from(601px){
+
+            @include size(3);
+            @include shift(0);
+            margin-bottom: -1.5em;
+        }
     }
     &__text-big {
-        font-size: pxWidthInVw(42);
+        font-size: pxWidthInVw(42); 
         line-height: 140%;
         @include adobeXdLetterSpacingToEm(-20);
         margin-bottom:30px;
+        @include to(1024px){ 
+            font-size: 32px;
+        }
     }
     &__text {
         font-size: pxWidthInVw(18);
         line-height: 155%;
         @include adobeXdLetterSpacingToEm(20);
         margin-bottom: 20px;
+        @include to(1024px){
+            font-size: 16px;
+        }
     }
 }

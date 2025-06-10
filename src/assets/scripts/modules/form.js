@@ -38,7 +38,6 @@ const forms = [
                 font-size: 21px;
                 font-style: normal;
                 line-height: 120%; /* 72px */
-                text-transform: uppercase;
                 z-index: 2;
                 padding: 8px;
                 padding-left: 40px;

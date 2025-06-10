@@ -214,13 +214,14 @@ if (window.screen.width <= 600) {
 
 function newsSlider() {
     new Swiper('[data-news-slider]', {
-        freeMode: true,
-        slidesPerView:1,
-        spaceBetween: 20,
+        freeMode: false,
+        slidesPerView: 1.25,
+        spaceBetween: 16,
         breakpoints: {
             600: {
                 slidesPerView: 2,
                 spaceBetween: 24,
+                freeMode: true,
             },
             900: {
                 slidesPerView: 3,

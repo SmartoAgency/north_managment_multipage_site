@@ -15,10 +15,7 @@
 	transition: .355s ease-in-out;
 	background-color: #171717;
 	@include to(600px){
-		padding-top: 40px;
-		&.headroom--not-top {
-			transform: translateY(-28px);
-		}
+		padding: var(--page-side-fields);
 	}
 	&>* {
 		pointer-events: auto;
@@ -26,9 +23,16 @@
 	&__logo {
 		width: 25%;
 		padding-right: 30px;
+		@include to(600px){
+			width: auto;
+		}
 		img {
 			height: 36px;
 			width: auto;
+			@include to(600px){
+				height: 32px;
+				width: 208px;
+			}
 		}
 	}
 	&__slogan {
@@ -38,6 +42,9 @@
 		text-transform: uppercase;
 		letter-spacing: 0.15em;
 		color: #F4F3EC;
+		@include to(600px){
+			display: none;
+		}
 	}
 	&__menu {
 		margin-left: auto;
@@ -48,6 +55,11 @@
 		text-transform: uppercase;
 		font-family: $default-font;
 		@include adobeXdLetterSpacingToEm(140);
+		@include to(600px){
+			div {
+				display: none;
+			}
+		}
 		svg {
 			margin-left: 20px;
 		}
