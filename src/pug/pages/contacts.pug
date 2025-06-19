@@ -2,7 +2,7 @@
 extends ../layout/main
 block variable
   -
-    var title_page = 'contacts'
+    var title_page = 'Contacts'
     var id_page = 'id-page-contacts'
     var class_page = 'class-page-contacts'
     var breadcrumbsSubitem = [
@@ -22,6 +22,8 @@ block scripts
   script(defer src='./assets/scripts/index.bundle.js')
 block content
   .inner-screen-1
+    .inner-screen-1__content
+      .inner-screen-1__title Contacts
   .contact-page-screen.g-screen-with-paddings
     .contact-page-screen__content
       .block-subtitle Contact us

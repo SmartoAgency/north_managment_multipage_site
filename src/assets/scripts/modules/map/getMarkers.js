@@ -83,11 +83,11 @@ export async function fetchMarkersData(google) {
 function mockData() {
     return [
         {
-            "name": "North Development headquarter",
+            "name": "North Development Headquarter",
             "code": "main",
             "list": [
                 {
-                    "name": "North Development headquarter",
+                    "name": "North Development Headquarter",
                     "id": "north-development-hq",
                     "coordinations": {
                       latitude: 25.76211078627346, 

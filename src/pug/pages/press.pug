@@ -2,7 +2,7 @@
 extends ../layout/main
 block variable
   -
-    var title_page = 'press'
+    var title_page = 'Press'
     var id_page = 'id-page-press'
     var class_page = 'class-page-press'
     var breadcrumbsSubitem = [
@@ -26,12 +26,14 @@ block scripts
   script(defer src='./assets/scripts/press.js')
 block content
   .inner-screen-1
+    .inner-screen-1__content
+      .inner-screen-1__title Press
   .press-block.g-screen-with-paddings
     .press-block__content
       .block-subtitle Press
       .press-block__title North Development in the media.
       .press-block__group1
-        each val in [12,3,4,5]
+        each val in [12,3,4]
           .press-card
             .press-card__date April #{val} 2024
             .press-card__img

@@ -2,7 +2,7 @@
 extends ../layout/main
 block variable
   -
-    var title_page = 'portfolio'
+    var title_page = 'Portfolio'
     var id_page = 'id-page-portfolio'
     var class_page = 'class-page-portfolio'
     var breadcrumbsSubitem = [
@@ -14,7 +14,7 @@ block variable
     var buttons = [
       {label: 'All', name:'main'},
       {label: 'North Development HQ', name:'north-development-hq'},
-      {label: 'DOMUS FLATS Brickell PArk', name:'domus-flats-brickell-park'},
+      {label: 'DOMUS FLATS Brickell park', name:'domus-flats-brickell-park'},
       {label: 'DOMUS FLATS Brickell Center', name:'domus-flats-brickell-center'},
       {label: 'House of Wellness', name:'house-of-wellness'},
     ];
@@ -45,6 +45,8 @@ block scripts
   script(defer src='./assets/scripts/portfolio.bundle.js')
 block content
   .inner-screen-1
+    .inner-screen-1__content
+      .inner-screen-1__title Portfolio
   .our-projects.g-screen-with-paddings
     .our-projects__content
       .block-subtitle our projects

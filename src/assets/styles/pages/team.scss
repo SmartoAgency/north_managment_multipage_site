@@ -1,5 +1,4 @@
 .team-block {
-    padding-top: var(--section-v-offset);
     padding-bottom: calc(var(--section-v-offset) * 1.5);
     &__content {
         @include row-flex();
@@ -184,7 +183,7 @@
         flex-direction: column;
         justify-content: flex-start;
         gap: 30px;
-        width: calc(33% - 12.5px);
+        width: calc(33.3333% - 25px);
         margin-top: pxWidthInVw(90);
         @include to(600px){
             gap: 24px;

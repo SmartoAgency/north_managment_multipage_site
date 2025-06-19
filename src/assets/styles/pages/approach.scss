@@ -1,6 +1,7 @@
 .approach {
     --group-t-padding: 60px;
     padding-bottom: var(--section-v-offset);
+    padding-top: var(--section-v-offset);
     @include to(600px){
         --group-t-padding: 160px;
 

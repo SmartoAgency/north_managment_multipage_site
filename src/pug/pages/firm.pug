@@ -2,9 +2,10 @@
 extends ../layout/main
 block variable
   -
-    var title_page = 'firm'
+    var title_page = 'Firm'
     var id_page = 'id-page-firm'
     var class_page = 'class-page-firm'
+    var aboutUsClass = 'no-top-padding'
     var breadcrumbsSubitem = [
       {
         label: 'About',
@@ -24,6 +25,8 @@ block scripts
   script(defer src='./assets/scripts/index.bundle.js')
 block content
   .inner-screen-1
+    .inner-screen-1__content
+      .inner-screen-1__title Firm
   include ../blocks/block-about-us.pug
   .img-screen
     .paralax-screen
@@ -48,6 +51,35 @@ block content
         .timeline-block__list--small-item(data-split-lines) April — $70M construction loan for Brickell Park 
         .timeline-block__list--small-item(data-split-lines) May — Start of Brickell Center Sales
         .timeline-block__list--small-item(data-split-lines) July — Start of Construction of Domus Brickell Park
+  #approach.approach.g-screen-with-paddings
+    .approach__content
+      .approach__group.approach__group--first.active
+        .block-subtitle Approach
+        .approach__line
+        .approach__group-title.approach__text-big(data-split-lines) North Development brings a wide range of specialized experience and expertise, from brand creation to construction. 
+        button(type="button").dashed-button
+          span Export the firm
+          <svg xmlns="http://www.w3.org/2000/svg" width="16.563" height="16.563" viewBox="0 0 16.563 16.563">
+            <path id="Icon_ionic-md-arrow-back" data-name="Icon ionic-md-arrow-back" d="M17.688,11.1H8.795l4.1-4.1L11.833,5.977,5.977,11.833l5.856,5.856,1.025-1.025-4.062-4.1h8.894Z" transform="translate(25.015 8.281) rotate(135)" fill="#f4f3ec"/>
+          </svg>
+      .approach__group.active
+        .block-subtitle DEVELOPMENT STRATEGIES
+        .approach__line
+        .approach__group-title.approach__text-big(data-split-lines) Our industry-leading team constructs, develops, and creates branded identities for attainable luxury residences in among the world’s most sought-after cities, which allows residents unique access to otherwise cost-prohibitive locations. 
+        button(type="button").dashed-button
+          span Export the team
+          <svg xmlns="http://www.w3.org/2000/svg" width="16.563" height="16.563" viewBox="0 0 16.563 16.563">
+            <path id="Icon_ionic-md-arrow-back" data-name="Icon ionic-md-arrow-back" d="M17.688,11.1H8.795l4.1-4.1L11.833,5.977,5.977,11.833l5.856,5.856,1.025-1.025-4.062-4.1h8.894Z" transform="translate(25.015 8.281) rotate(135)" fill="#f4f3ec"/>
+          </svg>
+      .approach__group.approach__group.approach__group--last.active
+        .block-subtitle MANAGEMENT
+        .approach__line
+        .approach__group-title.approach__text-big(data-split-lines) North Management was created by North Development specifically to uphold its portfolio of properties to the highest standards of service, design, and operational excellence while protecting brand integrity. North Management leverages multiple decades of leadership expertise in luxury hospitality to build top-tier teams who consistently oversee, refine, and evolve every element of the residential experience across North Development’s robust portfolio.
+        button(type="button").dashed-button
+          span Visit North Management
+          <svg xmlns="http://www.w3.org/2000/svg" width="16.563" height="16.563" viewBox="0 0 16.563 16.563">
+            <path id="Icon_ionic-md-arrow-back" data-name="Icon ionic-md-arrow-back" d="M17.688,11.1H8.795l4.1-4.1L11.833,5.977,5.977,11.833l5.856,5.856,1.025-1.025-4.062-4.1h8.894Z" transform="translate(25.015 8.281) rotate(135)" fill="#f4f3ec"/>
+          </svg>
   include ../includes/contact-screen.pug
 block footer
   include ../includes/footer.pug

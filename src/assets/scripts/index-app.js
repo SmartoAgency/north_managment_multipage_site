@@ -277,7 +277,44 @@ document.querySelectorAll('.timeline-block__list>*').forEach(el => {
 })
 
 
+function simpleBlockSlider() {
+    const slider = document.querySelector('[data-simple-block-slider]');
+    if (!slider) return;
+    new Swiper(slider, {
+        slidesPerView: 3,
+        breakpoints: {
+            320: {
+                slidersPerView: 1,
+            },
+            601: {
+                slidesPerView: 3,
+            },
+            slidesPerView: 3,
+        }
+    });
 
+    const tl = gsap.timeline({
+        // data-simple-block-slider
+        scrollTrigger: {
+            trigger: slider,
+            once: true,
+            start: '20% bottom',
+            end: 'bottom top',
+        }
+    })
+    .fromTo(slider.querySelectorAll('img'), {
+        clipPath: 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)'
+    }, {
+        clipPath: 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+        stagger: 0.1,
+        duration: 3,
+        ease: 'power4',
+    });
+
+}
+
+
+simpleBlockSlider();
 
 //gsap count up animation 
 
@@ -295,4 +332,6 @@ gsap.utils.toArray('[data-count-up-animation]').forEach(el => {
             once: true,
         }
     });
-})
+});
+
+

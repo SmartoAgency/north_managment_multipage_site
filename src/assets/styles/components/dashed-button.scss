@@ -9,6 +9,7 @@
     display: flex;
     align-items: center;
     text-decoration: none;
+    width: max-content;
     @include to(1024px){
         font-size: 12px;
     }

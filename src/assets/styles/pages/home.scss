@@ -143,6 +143,9 @@
     padding-bottom: var(--section-v-offset);
     
     border-bottom: 1px solid var(--color-bg-colour);
+    &.no-top-padding {
+        padding-top: 0;
+    }
     @media screen and (max-width:600px){
         padding-top: 60px;
         padding-bottom: 60px;
@@ -275,6 +278,27 @@
     @include to(600px){
         padding-top: 30px;
         padding-bottom: 90px;
+    }
+    &__slider {
+        margin-top: calc(var(--section-v-offset) * 0.65);
+        margin-bottom: calc(var(--section-v-offset) * 0.65);
+        width: 100%;
+    }
+    .swiper-slide {
+        // height: 80vh;
+        text-align: center;
+        img {
+            height: 60vh;
+            object-fit: contain;
+            object-position: bottom;
+        }
+    }
+    .swiper-slide__text {
+        margin-top: 20px;
+        font-size: 24px;
+        @include to(600px){
+            font-size: 18px;
+        }
     }
     &__content {
         @include row-flex();
@@ -624,7 +648,26 @@
 }
 
 .inner-screen-1 {
-    padding-top: calc(var(--header-h) + pxInVh(300));
+    padding-top: calc(var(--header-h) + pxInVh(150));
+    padding-bottom: pxInVh(150);
+    padding-left: var(--page-side-fields);
+    padding-right: var(--page-side-fields);
+    &__content {
+        @include row-flex();
+    }
+    &__title {
+        font-size: pxWidthInVw(96);
+        line-height: 120%;
+        text-transform: uppercase;
+        @include size(9);
+        @include shift-left(3);
+        @include shift-right(0);
+        @include size-xs(12);
+        @include shift-xs(0);
+        @include to(600px){
+            font-size: 48px;
+        }
+    }
     @include to(600px){
         padding-top: calc(var(--header-h) + 80px);
     }

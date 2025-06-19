@@ -32,7 +32,7 @@ block variable
     ]
 
 block meta
-  title= 'North managment'
+  title= 'North Development'
   meta(name='description', content='')
 block head
     link(rel='stylesheet', href="./assets/styles/main.min.css")
@@ -65,12 +65,24 @@ block content
       .block-subtitle POrtfolio
       .home-simple-block__text.home-simple-block__text--with-padding.text-42(data-split-lines) A growing portfolio of unique real estate offerings with a focus on quality and service.
       .home-simple-block__button
-          button(type="button").dashed-button
+          a(type="button" href="/portfolio").dashed-button
             span Explore our Portfolio
             <svg xmlns="http://www.w3.org/2000/svg" width="16.563" height="16.563" viewBox="0 0 16.563 16.563">
               <path id="Icon_ionic-md-arrow-back" data-name="Icon ionic-md-arrow-back" d="M17.688,11.1H8.795l4.1-4.1L11.833,5.977,5.977,11.833l5.856,5.856,1.025-1.025-4.062-4.1h8.894Z" transform="translate(25.015 8.281) rotate(135)" fill="#f4f3ec"/>
             </svg>
-      img(src="./assets/images/home/portfolio.png").home-simple-block__img
+      .home-simple-block__slider.swiper-container(data-simple-block-slider)
+        .swiper-wrapper
+          .swiper-slide
+            img(src="./assets/images/home/projects/no-bg/domus-flats-brickel-center.png" loading="lazy")
+            .swiper-slide__text Domus Flats Brickell Center
+          .swiper-slide
+            img(src="./assets/images/home/projects/no-bg/house_of_wellness.png" loading="lazy")
+            .swiper-slide__text House of Wellness
+          .swiper-slide
+            img(src="./assets/images/home/projects/no-bg/domus-flats-brickel-park.png" loading="lazy")
+            .swiper-slide__text Domus Flats Brickell Park
+
+      //- img(src="./assets/images/home/portfolio.png").home-simple-block__img
   .home-news.g-screen-with-paddings
     .home-news__bg(style="background-image: url('./assets/images/home/news-bg.jpg')")
     .home-news__content
