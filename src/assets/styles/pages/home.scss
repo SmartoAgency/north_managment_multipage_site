@@ -288,14 +288,17 @@
         // height: 80vh;
         text-align: center;
         img {
-            height: 60vh;
+            height: 40vh;
             object-fit: contain;
             object-position: bottom;
         }
     }
     .swiper-slide__text {
-        margin-top: 20px;
+        padding-top: 20px;
         font-size: 24px;
+        
+        border-top: 2px solid var(--color-bg-colour);
+        
         @include to(600px){
             font-size: 18px;
         }
@@ -542,6 +545,9 @@
         display: flex;
         align-items: center;
         gap: 37px;
+        @include to(1024px){
+            flex-wrap: wrap;
+        }
     }
     &__title {
         margin-bottom: 10px;
@@ -675,14 +681,12 @@
 
 .img-screen {
     width: 100vw;
-    height: 100vh;
+    height: 50vh;
     overflow: hidden;
-    @include from-to(601px, 1024px){
-        .paralax-screen-wrapper-scale,
-        .paralax-screen-wrapper-transform,
-        .paralax-screen {
-            height: 100%;
-        }
+    .paralax-screen-wrapper-scale,
+    .paralax-screen-wrapper-transform,
+    .paralax-screen {
+        height: 100%;
     }
     @include to(600px){
         height: 490px;

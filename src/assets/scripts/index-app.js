@@ -214,9 +214,11 @@ if (window.screen.width <= 600) {
 
 function newsSlider() {
     new Swiper('[data-news-slider]', {
-        freeMode: false,
+        freeMode: true,
         slidesPerView: 1.25,
         spaceBetween: 16,
+        centeredSlides: true,
+        initialSlide: 4,
         breakpoints: {
             600: {
                 slidesPerView: 2,
@@ -289,7 +291,6 @@ function simpleBlockSlider() {
             601: {
                 slidesPerView: 3,
             },
-            slidesPerView: 3,
         }
     });
 
@@ -308,7 +309,7 @@ function simpleBlockSlider() {
         clipPath: 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
         stagger: 0.1,
         duration: 3,
-        ease: 'power4',
+        ease: 'power3.out',
     });
 
 }
