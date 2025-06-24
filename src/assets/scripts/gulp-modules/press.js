@@ -93,8 +93,8 @@ function smallCardTemplate(data = {}) {
         <div class="press-card2">
             <div class="press-card2__img"><img src="${logo_page || 'https://north-development-wp.smarto.com.ua/wp-content/themes/3d/assets/images/press-img.svg'}" alt="" srcset=""></div>
             <div class="press-card2__text-wrap">
-                <div class="press-card2__date">${date || 'April 1 2024'}</div>
-                <div class="press-card2__text">${text || 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam…'}</div>
+                <div class="press-card2__date">${date || ''}</div>
+                <div class="press-card2__text">${title || ''}</div>
             </div><a class="press-card2__link" href="${url || 'http://google.com'}" target="_blank" rel="noopener noreferrer"><span>ReAD FULL ARTICLE</span><svg xmlns="http://www.w3.org/2000/svg" width="16.563" height="16.563" viewBox="0 0 16.563 16.563">
                     <path id="Icon_ionic-md-arrow-back" data-name="Icon ionic-md-arrow-back" d="M11.712,5.124H2.818l4.1-4.1L5.856,0,0,5.856l5.856,5.856,1.025-1.025-4.062-4.1h8.894Z" transform="translate(16.563 8.282) rotate(135)" fill="#f4f3ec"></path>
                 </svg></a>
@@ -113,8 +113,8 @@ function bigCardTemplate(data = {}) {
             <div class="press-card__img2">
                 <img src="${image || './assets/images/press-img2.jpg'}" alt="" srcset="">
             </div>
-            <div class="press-card__title">${title || 'Article Title'}</div>
-            <div class="press-card__text">${text || 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'}</div>
+            <div class="press-card__title">${title || ''}</div>
+            <div class="press-card__text">${text || ''}</div>
             <a class="press-card__link" href="${url || '#'}" target="_blank"> <span>ReAD FULL ARTICLE</span><svg xmlns="http://www.w3.org/2000/svg" width="16.563" height="16.563" viewBox="0 0 16.563 16.563">
                     <path fill="#F4F3EC" id="Icon_ionic-md-arrow-back" data-name="Icon ionic-md-arrow-back" d="M17.688,11.1H8.795l4.1-4.1L11.833,5.977,5.977,11.833l5.856,5.856,1.025-1.025-4.062-4.1h8.894Z" transform="translate(25.015 8.282) rotate(135)"></path>
                 </svg>
