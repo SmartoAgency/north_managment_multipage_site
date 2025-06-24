@@ -64,7 +64,7 @@
             }
         }
     }
-    .pagination {
+    &__content>.pagination {
         @include size(9);
         @include shift-left(3);
         @include shift-right(0);

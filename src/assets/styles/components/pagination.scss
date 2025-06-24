@@ -17,6 +17,14 @@
         gap: 9px;
         text-decoration: none;
         color: var(--color);
+        a {
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
+            gap: 9px;
+            text-decoration: none;
+            color: var(--color);
+        }
     }
     &__digits {
         display: flex;
@@ -26,5 +34,10 @@
     &__digit {
         text-decoration: none;
         color: var(--color);
+    }
+    .disabled,
+    .paginationjs-page.active {
+        opacity: 0.5;
+        pointer-events: none;
     }
 }

@@ -7,6 +7,7 @@ const config = {
   entry: {
     index: './src/assets/scripts/index-app.js',
     portfolio: './src/assets/scripts/portfolio.js',
+    press: './src/assets/scripts/gulp-modules/press.js',
   },
   output: {
     filename: '[name].bundle.js',

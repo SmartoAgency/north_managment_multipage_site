@@ -20,10 +20,7 @@ block head
 block scripts
   script(defer src='./assets/scripts/vendors.bundle.js')
   script(defer src='./assets/scripts/index.bundle.js')
-  script(defer src='./assets/scripts/libs.js')
-  script(defer src='./assets/scripts/index.js')
-  script(defer src='./assets/scripts/header.js')
-  script(defer src='./assets/scripts/press.js')
+  script(defer src='./assets/scripts/press.bundle.js')
 block content
   .inner-screen-1
     .inner-screen-1__content
@@ -61,22 +58,22 @@ block content
                 <path id="Icon_ionic-md-arrow-back" data-name="Icon ionic-md-arrow-back" d="M11.712,5.124H2.818l4.1-4.1L5.856,0,0,5.856l5.856,5.856,1.025-1.025-4.062-4.1h8.894Z" transform="translate(16.563 8.282) rotate(135)" fill="#f4f3ec"/>
               </svg>
       .pagination
-        a(href="#").pagination__arrow
-          <svg xmlns="http://www.w3.org/2000/svg" width="11.321" height="11.321" viewBox="0 0 11.321 11.321">
-            <path id="Icon_ionic-md-arrow-forward" data-name="Icon ionic-md-arrow-forward" d="M5.977,12.345h8.6l-3.962,3.962,1.026.991,5.66-5.66-5.66-5.66-.99.991,3.927,3.962h-8.6Z" transform="translate(17.297 17.297) rotate(180)" fill="#f4f3ec"/>
-          </svg>
-          span Prev
-        .pagination__digits
-          a(href="#").pagination__digit 1
-          a(href="#").pagination__digit 2
-          a(href="#").pagination__digit 3
-          a(href="#").pagination__digit 4
-          a(href="#").pagination__digit 5
-        a(href="#").pagination__arrow
-          span Next
-          <svg xmlns="http://www.w3.org/2000/svg" width="11.321" height="11.321" viewBox="0 0 11.321 11.321">
-            <path id="Icon_ionic-md-arrow-forward" data-name="Icon ionic-md-arrow-forward" d="M0,4.953H8.6L4.634.991,5.66,0l5.66,5.66-5.66,5.66-.99-.991L8.6,6.368H0Z" fill="#f4f3ec"/>
-          </svg>
+        //- a(href="#").pagination__arrow
+        //-   <svg xmlns="http://www.w3.org/2000/svg" width="11.321" height="11.321" viewBox="0 0 11.321 11.321">
+        //-     <path id="Icon_ionic-md-arrow-forward" data-name="Icon ionic-md-arrow-forward" d="M5.977,12.345h8.6l-3.962,3.962,1.026.991,5.66-5.66-5.66-5.66-.99.991,3.927,3.962h-8.6Z" transform="translate(17.297 17.297) rotate(180)" fill="#f4f3ec"/>
+        //-   </svg>
+        //-   span Prev
+        //- .pagination__digits
+        //-   a(href="#").pagination__digit 1
+        //-   a(href="#").pagination__digit 2
+        //-   a(href="#").pagination__digit 3
+        //-   a(href="#").pagination__digit 4
+        //-   a(href="#").pagination__digit 5
+        //- a(href="#").pagination__arrow
+        //-   span Next
+        //-   <svg xmlns="http://www.w3.org/2000/svg" width="11.321" height="11.321" viewBox="0 0 11.321 11.321">
+        //-     <path id="Icon_ionic-md-arrow-forward" data-name="Icon ionic-md-arrow-forward" d="M0,4.953H8.6L4.634.991,5.66,0l5.66,5.66-5.66,5.66-.99-.991L8.6,6.368H0Z" fill="#f4f3ec"/>
+        //-   </svg>
 
   include ../includes/contact-screen.pug
 block footer
