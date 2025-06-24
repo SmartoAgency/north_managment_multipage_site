@@ -30,19 +30,22 @@ toggleMenuHandler();
 //     }
 // });
 
-// gsap.timeline({
-//     ease: 'none',
-//     scrollTrigger: {
-//         trigger: '.home-about-us',
-//         start: '0% bottom',
-//         end: `${window.innerHeight} top`,
-//         scrub: 0.1,
-//     }
-// })
-// .to('.video-screen video', {
-//     y: window.innerHeight,
-//     ease: 'none'
-// })
+window.addEventListener('DOMContentLoaded', () => {
+    gsap.timeline({
+        ease: 'none',
+        scrollTrigger: {
+            trigger: '.block-about-us',
+            start: '0% bottom',
+            end: `${window.innerHeight} top`,
+            scrub: 0.1,
+        }
+    })
+    .to('.video-screen video', {
+        y: window.innerHeight,
+        ease: 'none'
+    })
+});
+
 
 
 
@@ -176,8 +179,9 @@ function splitToLinesAndFadeUp(selector, gsap) {
     });
 }
 
-
-splitToLinesAndFadeUp('[data-split-lines]', gsap);
+window.addEventListener('load', () => {
+    splitToLinesAndFadeUp('[data-split-lines]', gsap);
+});
 
 
 // pause video when is out of view

@@ -138,11 +138,19 @@
     &__socials {
         @include to(600px){
             display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 12px;
+        }
+        .social-link {
+            @include to(600px){
+                width: calc(50% - 12px);
+            }
         }
         .social-link~.social-link {
             margin-left: 24px;
             @include to(600px){
-                margin-left: 8px;
+                margin-left: 0px;
             }
         }
     }
