@@ -303,7 +303,7 @@ function simpleBlockSlider() {
         scrollTrigger: {
             trigger: slider,
             once: true,
-            start: '20% bottom',
+            start: '100% bottom',
             end: 'bottom top',
         }
     })

@@ -660,6 +660,22 @@
     padding-bottom: pxInVh(150);
     padding-left: var(--page-side-fields);
     padding-right: var(--page-side-fields);
+    position: relative;
+    &__bg {
+        position: absolute;
+        top: 0;
+        right: var(--page-side-fields);
+        width: 70%;
+        height: 100%;
+        z-index: -1;
+        object-fit: cover;
+        object-position: right;
+        @include to(600px){
+            right: 0;
+            width: 100%;
+            object-position: center right;
+        }
+    }
     &__content {
         @include row-flex();
     }
