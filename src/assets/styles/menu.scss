@@ -59,6 +59,10 @@
         display: flex;
         flex-direction: column;
         align-content: center;
+        @include from(1025px){
+            max-height: 100vh;
+            overflow-y: auto;
+        }
         @include to(600px){
             width: 100%;
             display: flex;
@@ -98,7 +102,7 @@
     }
     &__list {
         @include from(1025px){
-            margin-top: pxInVh(91);
+            margin-top: pxInVh(36);
             margin-bottom: pxInVh(36);
         }
         @include from-to(601px, 1024px){

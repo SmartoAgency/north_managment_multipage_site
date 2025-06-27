@@ -1,7 +1,7 @@
 import gsap, { ScrollTrigger } from 'gsap/all';
 import './modules/form';
 import Headroom from 'headroom.js';
-import Swiper, { FreeMode, Pagination, Scrollbar } from 'swiper';
+import Swiper, { Autoplay, FreeMode, Pagination, Scrollbar } from 'swiper';
 import { lenis } from './modules/scroll/leniscroll';
 import { toggleMenuHandler } from './modules/menu';
 
@@ -218,16 +218,17 @@ if (window.screen.width <= 600) {
 
 function newsSlider() {
     new Swiper('[data-news-slider]', {
-        freeMode: true,
-        slidesPerView: 1.25,
+        // freeMode: true,
+        // slidesPerView: 1.25,
         spaceBetween: 16,
-        centeredSlides: true,
-        initialSlide: 4,
+        // centeredSlides: true,
+        loop: true,
+        // centeredSlides: true,
+        initialSlide: 0,
         breakpoints: {
             600: {
                 slidesPerView: 2,
                 spaceBetween: 24,
-                freeMode: true,
             },
             900: {
                 slidesPerView: 3,
@@ -240,7 +241,10 @@ function newsSlider() {
         },
     })
 }
-newsSlider();
+
+window.addEventListener('load',newsSlider, { once: true });
+
+;
 function homeSliderSlider() {
     new Swiper('[data-home-slider]', {
         slidesPerView:1,
@@ -286,17 +290,31 @@ document.querySelectorAll('.timeline-block__list>*').forEach(el => {
 function simpleBlockSlider() {
     const slider = document.querySelector('[data-simple-block-slider]');
     if (!slider) return;
-    new Swiper(slider, {
+    const swiper = new Swiper(slider, {
         slidesPerView: 3,
+        modules: [Autoplay],
+        centeredSlides: true,
+        simulateTouch: window.screen.width < 600,
+        autoplay: window.screen.width < 600,
         breakpoints: {
             320: {
-                slidersPerView: 1,
+                slidesPerView: 1,
             },
             601: {
                 slidesPerView: 3,
             },
+        },
+        on: {
+            init: function (s) {
+                if (window.screen.width < 600) return;
+                setTimeout(() => {
+                    s.setProgress(0.5);
+                }, 1000);
+            }
         }
     });
+
+    
 
     const tl = gsap.timeline({
         // data-simple-block-slider
@@ -312,7 +330,7 @@ function simpleBlockSlider() {
     }, {
         clipPath: 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
         stagger: 0.1,
-        duration: 3,
+        duration: 4.5,
         ease: 'power3.out',
     });
 

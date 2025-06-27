@@ -183,8 +183,12 @@
         flex-direction: column;
         justify-content: flex-start;
         gap: 30px;
-        width: calc(33.3333% - 25px);
+        width: calc(25% - 25px);
         margin-top: pxWidthInVw(90);
+        @include from(1921px){
+            
+            width: calc(20% - 25px);
+        }
         @include to(600px){
             gap: 24px;
             width: calc(50% - 12.5px);
