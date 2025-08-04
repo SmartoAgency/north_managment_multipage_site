@@ -95,6 +95,17 @@ block content
             <path id="Icon_ionic-md-arrow-back" data-name="Icon ionic-md-arrow-back" d="M17.688,11.1H8.795l4.1-4.1L11.833,5.977,5.977,11.833l5.856,5.856,1.025-1.025-4.062-4.1h8.894Z" transform="translate(25.015 8.281) rotate(135)"/>
           </svg>
       .home-news__cards.swiper-container(data-news-slider)
+        .swiper-navigation
+          button(type="button" data-news-slider-prev) 
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11.711 5.123L2.818 5.123L6.918 1.023L5.856 0L0 5.856L5.856 11.712L6.881 10.687L2.819 6.587L11.713 6.587L11.711 5.123Z" fill="black"/>
+            </svg>
+
+          button(type="button" data-news-slider-next) 
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.42572 7.01372L9.31872 7.01372L5.21872 11.1137L6.28072 12.1367L12.1367 6.28072L6.28072 0.424719L5.25572 1.44972L9.31772 5.54972L0.423719 5.54972L0.42572 7.01372Z" fill="black"/>
+            </svg>
+
         .swiper-wrapper
           each val in [1,2,3,4,5,6,1,2,3,4,5,6,7,8,9]
             .swiper-slide.news-card
@@ -112,6 +123,16 @@ block content
     .home-slider__bg(style="background-image: url('./assets/images/home/news-bg.jpg')")
     .home-slider__content
       .swiper-container(data-home-slider)
+        .swiper-navigation
+          button(type="button" data-home-slider-prev) 
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11.711 5.123L2.818 5.123L6.918 1.023L5.856 0L0 5.856L5.856 11.712L6.881 10.687L2.819 6.587L11.713 6.587L11.711 5.123Z" fill="black"/>
+            </svg>
+
+          button(type="button" data-home-slider-next) 
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.42572 7.01372L9.31872 7.01372L5.21872 11.1137L6.28072 12.1367L12.1367 6.28072L6.28072 0.424719L5.25572 1.44972L9.31772 5.54972L0.423719 5.54972L0.42572 7.01372Z" fill="black"/>
+            </svg>
         .swiper-wrapper
           .swiper-slide.home-slider__slide
             .home-slider__slide-title “To ensure that value and quality remain intact, we have a created a one-of-a-kind management company to oversee day-to-day services, ensuring that the brand maintains its top-level reputation from one project to the next.”

@@ -71,6 +71,13 @@
         @include from(1025px){
             padding-right: 40%;
         }
+        @media (hover: hover) and (min-width:1025px){
+            transform-origin: left;
+            transition: .25s ease-in-out;
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
     }
     &__button {
         @include size(9);

@@ -71,6 +71,24 @@ const forms = [
               error: [],
             },
   
+            email: {
+              inputWrapper: new SexyInput({ animation: 'none', $field: $form.querySelector('[data-field-email]') }),
+              rule: yup
+            .string()
+            .test(
+              'email-empty-or-valid',
+              i18next.t('Invalid email format'),
+              value => {
+                if (!value || value.trim().length === 0) return true;
+                // Use yup's built-in email validation
+                return yup.string().email().isValidSync(value);
+              }
+                ),
+  
+              defaultMessage: i18next.t('email'),
+              valid: false,
+              error: [],
+            },
             phone: {
               inputWrapper: new SexyInput({ animation: 'none', $field: $form.querySelector('[data-field-phone]'), typeInput: 'phone' }),
               rule: yup

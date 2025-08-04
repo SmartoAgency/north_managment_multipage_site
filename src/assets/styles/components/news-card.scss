@@ -7,6 +7,15 @@
     @include to(600px){
         padding: 30px 24px 27px 24px;
     }
+    position: relative;
+    &:after {
+        content: '';
+        position: absolute;
+        left: 100%;
+        top: 0;
+        width: 50px;
+        height: 100%;
+    }
     &__date {
         font-size: pxWidthInVw(12);
         line-height: 350%;
@@ -95,11 +104,11 @@
             transition: transform 0.3s ease-in-out;
 
         }
-        &:hover &__img {
-            transform:  translateX(20px);
-        }
+        // &:hover &__img {
+        //     transform:  translateX(20px);
+        // }
         
-        &:hover .news-card__link svg {
+        .news-card__link:hover svg {
             transform: rotate(45deg);
         }
     }

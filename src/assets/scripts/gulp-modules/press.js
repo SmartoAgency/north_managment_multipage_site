@@ -77,10 +77,11 @@ function initPagination(fetchedData) {
 
             addQueryParam(PRESS_PAGE_PARAM, pagination.pageNumber);
             
-
-            document.querySelector('.press-block__content').scrollIntoView({
-                behavior: 'smooth',
-            });
+            setTimeout(() => {
+                document.querySelector('.press-block__content').scrollIntoView({
+                    behavior: 'smooth',
+                });
+            }, 1500);
         }
     });
 }

@@ -140,20 +140,20 @@
         }
     }
     &__socials {
-        @include to(600px){
+        @include to(1024px){
             display: flex;
             flex-wrap: wrap;
             justify-content: flex-start;
             gap: 12px;
         }
         .social-link {
-            @include to(600px){
+            @include to(1024px){
                 width: calc(50% - 12px);
             }
         }
         .social-link~.social-link {
             margin-left: 24px;
-            @include to(600px){
+            @include to(1024px){
                 margin-left: 0px;
             }
         }
@@ -167,9 +167,10 @@
         text-decoration: none;
         @include to(1024px){
             font-size: 12px;
+            padding: 8px;
         }
     }
-    @media (hover: hover) {
+    @media (hover: hover) and (min-width: 1025px) {
         &__close:hover {
             color: #FF925C;
             transition: color 0.3s ease-in;

@@ -69,6 +69,9 @@
         display: flex;
         padding-top: calc(var(--header-h) + pxInVh(280));
         @include row-flex();
+        @include from-to(601px, 1024px){
+            padding-top: calc(var(--header-h) + pxInVh(180));
+        }
         @include to(600px){
             padding-top: 0;
             flex-direction: column;
@@ -280,6 +283,8 @@
     @include to(600px){
         padding-top: 30px;
         padding-bottom: 90px;
+        max-width: 100vw;
+        overflow: hidden;
     }
     &__slider {
         margin-top: calc(var(--section-v-offset) * 0.65);
@@ -421,6 +426,50 @@
             cursor: grabbing;
         }
     }
+    .swiper-container {
+        position: relative;
+    }
+    .swiper-navigation {
+        position: absolute;
+        z-index: 2;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        pointer-events: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 20px;
+        padding-right: 20px;
+        @media screen and (max-width:600px){
+            display: none;
+        }
+        button {
+            pointer-events: all;
+            border: none;
+            background-color: transparent;
+            width: 40px;
+            height: 40px;
+            @include to(600px){
+                width: 32px;
+                height: 32px;
+            }
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+            @media (hover:hover) and (min-width:1025px){
+                svg {
+                    transform-origin: center;
+                    transform-box: fill-box;
+                    transition: transform 0.3s ease-in-out;
+                }
+                &:hover svg {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
 }
 
 .home-slider {
@@ -441,6 +490,7 @@
         z-index: -1;
     }
     .swiper-container {
+        position: relative;
         @include to(600px){
             overflow: hidden;
         }
@@ -452,6 +502,54 @@
         --swiper-pagination-bullet-inactive-color: var(--color-bg-colour);
         --swiper-pagination-bullet-inactive-opacity: 1;
         --swiper-pagination-bullet-size: 9px;
+    }
+    .swiper-container {
+        cursor: grab;
+        &:active {
+            cursor: grabbing;
+        }
+    }
+
+    .swiper-navigation {
+        position: absolute;
+        z-index: 2;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        pointer-events: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 20px;
+        padding-right: 20px;
+        @media screen and (max-width:600px){
+            display: none;
+        }
+        button {
+            pointer-events: all;
+            border: none;
+            background-color: transparent;
+            width: 40px;
+            height: 40px;
+            @include to(600px){
+                width: 32px;
+                height: 32px;
+            }
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+            @media (hover:hover) and (min-width:1025px){
+                svg {
+                    transform-origin: center;
+                    transform-box: fill-box;
+                    transition: transform 0.3s ease-in-out;
+                }
+                &:hover svg {
+                    transform: scale(1.2);
+                }
+            }
+        }
     }
     &__slide {
         color: var(--color);
@@ -620,6 +718,19 @@
             &::placeholder {
                 color: var(--color-bg-colour);
 
+            }
+        }
+        textarea {
+            background-color: transparent;
+            font-size: 12px;
+            line-height: 24px;
+            @include adobeXdLetterSpacingToEm(20);
+            width: 100%;
+            color: var(--color-bg-colour);
+            resize: none;
+            height: 100px;
+            &::placeholder {
+                color: var(--color-bg-colour);
             }
         }
         &--large input {
@@ -828,6 +939,9 @@
                 @include from-to(1025px, 1448px){
                     right: 106.566667%;
                 }
+                @include from-to(601px, 1024px){
+                    right: 105.1667%;
+                }
             }
             &:after {
                 content: '';
@@ -843,6 +957,9 @@
                 opacity: 0;
                 @include from-to(1025px, 1448px){
                     right: calc(106.466667% + 9px);
+                }
+                @include from-to(601px, 1024px){
+                    right: calc(105.166667% + 9px);
                 }
             }
             &.active:after {

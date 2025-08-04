@@ -1,7 +1,7 @@
 import gsap, { ScrollTrigger } from 'gsap/all';
 import './modules/form';
 import Headroom from 'headroom.js';
-import Swiper, { Autoplay, FreeMode, Pagination, Scrollbar } from 'swiper';
+import Swiper, { Autoplay, FreeMode, Navigation, Pagination, Scrollbar } from 'swiper';
 import { lenis } from './modules/scroll/leniscroll';
 import { toggleMenuHandler } from './modules/menu';
 
@@ -220,9 +220,15 @@ function newsSlider() {
     new Swiper('[data-news-slider]', {
         // freeMode: true,
         // slidesPerView: 1.25,
+        modules: [Navigation],
+        navigation: {
+            nextEl: '[data-news-slider-next]',
+            prevEl: '[data-news-slider-prev]',
+        },
         spaceBetween: 16,
         // centeredSlides: true,
         loop: true,
+        simulateTouch: true,
         // centeredSlides: true,
         initialSlide: 0,
         breakpoints: {
@@ -248,6 +254,11 @@ window.addEventListener('load',newsSlider, { once: true });
 function homeSliderSlider() {
     new Swiper('[data-home-slider]', {
         slidesPerView:1,
+        modules: [Navigation],
+        navigation: {
+            nextEl: '[data-home-slider-next]',
+            prevEl: '[data-home-slider-prev]',
+        },
         pagination: {
             el: '[data-home-slider-pagination]',
             clickable: true,

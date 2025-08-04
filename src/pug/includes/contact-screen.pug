@@ -12,8 +12,9 @@
           .input-message(data-input-message)
         .input-group
           input(autocomplete="off" type="text" name="last_name" placeholder="Last name")
-        .input-group 
+        .input-group(data-field-input data-field-email data-status="field--inactive")
           input(autocomplete="off" type="text" inputmode="email" name="email" placeholder="Email")
+          .input-message(data-input-message)
         .input-group(data-field-input data-field-phone data-status="field--inactive")
           input(autocomplete="off" inputmode="tel" type="tel" name="phone" placeholder="Phone number")
           .input-message(data-input-message)
@@ -22,7 +23,7 @@
         .input-group 
           input(autocomplete="off" type="text" name="hear_from" placeholder="How did you hear about us?")
         .input-group 
-          input(autocomplete="off" type="text" name="message" placeholder="Message")
+          textarea(autocomplete="off" type="text" name="message" placeholder="Message")
         button(type="submit" data-btn-submit) 
           span SUBMIT
           span(data-btn-submit-text)
