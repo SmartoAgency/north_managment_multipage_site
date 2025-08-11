@@ -81,7 +81,7 @@ function initPagination(fetchedData) {
                 document.querySelector('.press-block__content').scrollIntoView({
                     behavior: 'smooth',
                 });
-            }, 1500);
+            }, 300);
         }
     });
 }

@@ -185,14 +185,14 @@
             }
         }
     }
-    @media (hover: hover) {
+    @media (hover: hover) and (min-width: 1025px) {
         &__link svg {
             transform-origin: center;
             transform-box: fill-box;
+            transition: transform 0.3s ease-in-out;
         }
         &__link:hover svg {
             transform: rotate(45deg);
-            transition: transform 0.3s ease-in-out;
         }
     }
 }
